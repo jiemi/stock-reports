@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CANSLIM 卖出规则矩阵回测</title>
+  <style>
+    body { margin: 0; background: #f6f7f9; color: #17202a; font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 1280px; margin: 0 auto; padding: 28px 16px 64px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    h2 { margin-top: 28px; border-top: 1px solid #d8dee8; padding-top: 18px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; margin: 12px 0 24px; }
+    th, td { border: 1px solid #e0e5ed; padding: 7px 9px; text-align: left; vertical-align: top; }
+    th { background: #eef2f7; position: sticky; top: 0; }
+    .pos { color: #087f5b; font-weight: 650; }
+    .neg { color: #c92a2a; font-weight: 650; }
+    .muted { color: #64748b; }
+    .note { background: #fff; border: 1px solid #e0e5ed; border-radius: 8px; padding: 12px 14px; }
+  </style>
+</head>
+<body><main>
+  <h1>CANSLIM 卖出规则矩阵回测</h1>
+  <p class="muted">同一批 base80_score90 入场信号上，只比较卖出规则；区间 2025-01-01 至 2026-05-15；本金 400,000；股票池 292 只。</p>
+  <div class="note">按 PF 优先排序，第一名是 <b>canslim_trend</b>：收益 37.17%，最大回撤 -6.68%，PF 7.53。</div>
+  <h2>卖出规则排名</h2>
+  <table>
+    <tr>
+      <th>#</th><th>规则</th><th>说明</th><th>Events</th><th>Trades</th>
+      <th>收益</th><th>最大回撤</th><th>胜率</th><th>PF</th><th>平均单笔</th><th>最大赢家</th><th>最大输家</th><th>退出原因</th>
+    </tr>
+    <tr><td>1</td><td><b>canslim_trend</b></td><td>当前定稿版：盈利后10EMA/21EMA/50SMA + climax top</td><td>20</td><td>13</td><td class='pos'>37.17%</td><td class='neg'>-6.68%</td><td>53.85%</td><td>7.53</td><td class='pos'>11.44%</td><td class='pos'>45.65%</td><td class='neg'>-6.64%</td><td>stop=5；profit_close_below_21ema=3；climax_reversal=2；profit_close_below_10ema=2；stop_gap=1</td></tr>
+<tr><td>2</td><td><b>partial_profit_runner</b></td><td>利润奔跑版：+25%先卖半仓，剩余仓位按21EMA/50SMA/强climax退出</td><td>20</td><td>19</td><td class='pos'>35.00%</td><td class='neg'>-4.67%</td><td>68.42%</td><td>7.15</td><td class='pos'>15.74%</td><td class='pos'>48.44%</td><td class='neg'>-6.64%</td><td>profit_take_half_25=6；confirmed_close_below_21ema=5；stop=5；profit_close_below_50sma=1；stop_gap=1；end=1</td></tr>
+<tr><td>3</td><td><b>legacy</b></td><td>旧版：跌破21EMA、时间止损、最大持有天数</td><td>20</td><td>13</td><td class='pos'>29.15%</td><td class='neg'>-7.08%</td><td>53.85%</td><td>6.12</td><td class='pos'>8.97%</td><td class='pos'>32.32%</td><td class='neg'>-6.64%</td><td>close_below_21ema=6；stop=5；max_hold=1；stop_gap=1</td></tr>
+<tr><td>4</td><td><b>confirmed_21ema_runner</b></td><td>更放松：取消10EMA卖出，21EMA需要确认，强化 climax top</td><td>20</td><td>13</td><td class='pos'>26.56%</td><td class='neg'>-8.17%</td><td>53.85%</td><td>5.66</td><td class='pos'>8.18%</td><td class='pos'>29.18%</td><td class='neg'>-6.64%</td><td>volume_close_below_21ema=5；stop=5；stop_gap=1；confirmed_close_below_21ema=1；end=1</td></tr>
+<tr><td>5</td><td><b>fifty_sma_runner</b></td><td>长线 runner：盈利后尽量持有到50SMA破位或强climax</td><td>20</td><td>13</td><td class='pos'>19.99%</td><td class='neg'>-12.52%</td><td>53.85%</td><td>4.51</td><td class='pos'>6.15%</td><td class='pos'>28.18%</td><td class='neg'>-6.64%</td><td>long_runner_close_below_50sma=6；stop=5；stop_gap=1；end=1</td></tr>
+  </table>
+  <h2>解读</h2>
+  <ul>
+    <li>这张表只改变卖出规则，入场信号固定为 base80_score90 + 当前财务设置。</li>
+    <li><code>partial_profit_runner</code> 会把半仓止盈记录成一笔 trade，所以 trades 数会比全仓退出模式更多。</li>
+    <li>如果收益提升但最大回撤明显放大，说明 runner 放得过松，需要配合大盘风险或个股趋势线再收紧。</li>
+  </ul>
+</main></body></html>
