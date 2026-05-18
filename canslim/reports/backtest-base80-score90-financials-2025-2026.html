@@ -39,7 +39,7 @@
   </div>
   <h2>结论</h2>
   <ul>
-    <li>这是技术规则第一版，财务和历史成分股未纳入，结果会有 survivorship bias，不能当成可直接上线的最终绩效。</li>
+    <li>已纳入 as-of 财务过滤：只使用信号日当时可见的季度财报，要求 EPS YoY &gt;= 25%、Revenue YoY &gt;= 20%。</li>
     <li>优先看 event study：信号后 20/40 日有没有正收益和可控回撤；组合回测只是检查规则是否能在仓位约束下运转。</li>
     <li>如果 Pocket Pivot 单独表现弱，下一版应提高 VCP/base_score 门槛，而不是放宽信号。</li>
   </ul>
