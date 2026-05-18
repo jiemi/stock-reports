@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CANSLIM 参数矩阵回测</title>
+  <style>
+    body { margin: 0; background: #f6f7f9; color: #17202a; font: 14px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width: 1280px; margin: 0 auto; padding: 28px 16px 64px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    h2 { margin-top: 28px; border-top: 1px solid #d8dee8; padding-top: 18px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; margin: 12px 0 24px; }
+    th, td { border: 1px solid #e0e5ed; padding: 7px 9px; text-align: left; vertical-align: top; }
+    th { background: #eef2f7; position: sticky; top: 0; }
+    .pos { color: #087f5b; font-weight: 650; }
+    .neg { color: #c92a2a; font-weight: 650; }
+    .muted { color: #64748b; }
+    .note { background: #fff; border: 1px solid #e0e5ed; border-radius: 8px; padding: 12px 14px; }
+  </style>
+</head>
+<body><main>
+  <h1>CANSLIM 参数矩阵回测</h1>
+  <p class="muted">同一批底层信号上做过滤和仓位对照；区间 2025-01-01 至 2026-05-15；本金 400,000；股票池 292 只。</p>
+  <div class="note">当前矩阵按 Profit Factor 优先排序，第一名是 <b>no_high_base80</b>：收益 13.38%，最大回撤 -6.32%，PF 7.63。</div>
+  <h2>参数组合排名</h2>
+  <table>
+    <tr>
+      <th>#</th><th>Variant</th><th>说明</th><th>Events</th><th>Trades</th>
+      <th>收益</th><th>最大回撤</th><th>胜率</th><th>PF</th><th>20日均值</th><th>20日胜率</th>
+      <th>Stop</th><th>Gap</th>
+    </tr>
+    <tr><td>1</td><td><b>no_high_base80</b></td><td>禁止 high risk + base&gt;=80</td><td>12</td><td>6</td><td class='pos'>13.38%</td><td class='neg'>-6.32%</td><td>50.00%</td><td>7.63</td><td>15.37%</td><td>83.33%</td><td>2</td><td>1</td></tr>
+<tr><td>2</td><td><b>conservative</b></td><td>base&gt;=80 + score&gt;=90 + 不追高 + 禁止 high risk</td><td>12</td><td>6</td><td class='pos'>13.38%</td><td class='neg'>-6.32%</td><td>50.00%</td><td>7.63</td><td>15.37%</td><td>83.33%</td><td>2</td><td>1</td></tr>
+<tr><td>3</td><td><b>base80_score90</b></td><td>base&gt;=80 且 score&gt;=90</td><td>16</td><td>10</td><td class='pos'>24.03%</td><td class='neg'>-7.41%</td><td>60.00%</td><td>7.54</td><td>16.41%</td><td>87.50%</td><td>3</td><td>1</td></tr>
+<tr><td>4</td><td><b>vcp_base80</b></td><td>只做 VCP breakout，base&gt;=80</td><td>4</td><td>4</td><td class='pos'>10.65%</td><td class='neg'>-8.04%</td><td>75.00%</td><td>7.42</td><td>19.28%</td><td>100.00%</td><td>1</td><td>0</td></tr>
+<tr><td>5</td><td><b>risk6_base80</b></td><td>base&gt;=80 + 入场到止损风险&lt;=6%</td><td>31</td><td>16</td><td class='pos'>27.81%</td><td class='neg'>-7.30%</td><td>43.75%</td><td>4.31</td><td>11.43%</td><td>77.42%</td><td>6</td><td>3</td></tr>
+<tr><td>6</td><td><b>base90</b></td><td>base&gt;=90，其余同 baseline</td><td>16</td><td>12</td><td class='pos'>18.62%</td><td class='neg'>-7.48%</td><td>41.67%</td><td>3.55</td><td>13.20%</td><td>75.00%</td><td>4</td><td>2</td></tr>
+<tr><td>7</td><td><b>anti_chase_base80</b></td><td>base&gt;=80 + 不追高</td><td>31</td><td>18</td><td class='pos'>25.75%</td><td class='neg'>-7.61%</td><td>38.89%</td><td>3.46</td><td>11.43%</td><td>77.42%</td><td>7</td><td>3</td></tr>
+<tr><td>8</td><td><b>half_size_base80</b></td><td>base&gt;=80，单仓 12.5%，最多 4 仓</td><td>31</td><td>18</td><td class='pos'>12.29%</td><td class='neg'>-4.85%</td><td>38.89%</td><td>3.12</td><td>11.43%</td><td>77.42%</td><td>7</td><td>3</td></tr>
+<tr><td>9</td><td><b>base80</b></td><td>base&gt;=80，其余同 baseline</td><td>31</td><td>18</td><td class='pos'>24.57%</td><td class='neg'>-8.49%</td><td>38.89%</td><td>3.11</td><td>11.43%</td><td>77.42%</td><td>7</td><td>3</td></tr>
+<tr><td>10</td><td><b>vcp_base70</b></td><td>只做 VCP breakout，base&gt;=70</td><td>11</td><td>11</td><td class='pos'>16.39%</td><td class='neg'>-8.16%</td><td>36.36%</td><td>2.90</td><td>12.60%</td><td>72.73%</td><td>5</td><td>2</td></tr>
+<tr><td>11</td><td><b>pocket_base80</b></td><td>Pocket Pivot 必须 base&gt;=80，VCP 仍 base&gt;=60</td><td>53</td><td>33</td><td class='pos'>39.97%</td><td class='neg'>-11.82%</td><td>30.30%</td><td>2.54</td><td>8.76%</td><td>67.92%</td><td>15</td><td>7</td></tr>
+<tr><td>12</td><td><b>score90</b></td><td>score&gt;=90，base&gt;=60</td><td>51</td><td>33</td><td class='pos'>32.60%</td><td class='neg'>-9.67%</td><td>27.27%</td><td>2.31</td><td>6.30%</td><td>62.75%</td><td>15</td><td>8</td></tr>
+<tr><td>13</td><td><b>vcp_only</b></td><td>只做 VCP breakout</td><td>26</td><td>22</td><td class='pos'>22.82%</td><td class='neg'>-14.10%</td><td>27.27%</td><td>2.19</td><td>7.29%</td><td>61.54%</td><td>9</td><td>7</td></tr>
+<tr><td>14</td><td><b>no_high_risk</b></td><td>禁止 high risk 市场环境开新仓</td><td>29</td><td>16</td><td class='pos'>7.55%</td><td class='neg'>-7.84%</td><td>25.00%</td><td>1.81</td><td>3.84%</td><td>58.62%</td><td>7</td><td>3</td></tr>
+<tr><td>15</td><td><b>baseline</b></td><td>上次参数：base&gt;=60，VCP + Pocket，允许 high risk，25% 仓位</td><td>126</td><td>61</td><td class='pos'>35.59%</td><td class='neg'>-17.30%</td><td>27.87%</td><td>1.63</td><td>3.59%</td><td>55.56%</td><td>31</td><td>9</td></tr>
+<tr><td>16</td><td><b>anti_chase</b></td><td>不追高：次日开盘&lt;=信号收盘+5%，且&lt;=pivot+5%</td><td>126</td><td>59</td><td class='pos'>30.80%</td><td class='neg'>-14.69%</td><td>28.81%</td><td>1.61</td><td>3.59%</td><td>55.56%</td><td>29</td><td>10</td></tr>
+<tr><td>17</td><td><b>base70</b></td><td>base&gt;=70，其余同 baseline</td><td>93</td><td>49</td><td class='pos'>27.14%</td><td class='neg'>-18.05%</td><td>28.57%</td><td>1.61</td><td>4.63%</td><td>58.06%</td><td>24</td><td>8</td></tr>
+<tr><td>18</td><td><b>vcp_conservative</b></td><td>只做 VCP，base&gt;=70 + 不追高 + 禁止 high risk</td><td>0</td><td>0</td><td class='pos'>0.00%</td><td class='pos'>0.00%</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>0</td><td>0</td></tr>
+  </table>
+  <h2>解读</h2>
+  <ul>
+    <li>优先看 PF、最大回撤和交易数；收益很高但交易数极少的组合不能直接采信。</li>
+    <li>如果严格过滤后交易数过少，可以把它作为人工候选池，而不是全自动交易规则。</li>
+    <li>该矩阵仍未纳入财务 CANSLIM 和历史成分股修正，下一步应把财务过滤接入后再复测。</li>
+  </ul>
+</main></body></html>
