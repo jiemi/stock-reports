@@ -14,6 +14,7 @@ from pathlib import Path
 SITE_ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE = SITE_ROOT.parent
 TODAY = dt.date.today().isoformat()
+DEFAULT_BASE_URL = "https://jiemi.github.io/stock-reports"
 
 
 @dataclass(frozen=True)
@@ -51,7 +52,7 @@ def sh(args: list[str], cwd: Path = SITE_ROOT) -> str:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Publish stock report HTML files to the static site.")
     parser.add_argument("--date", default="today", help="Date to print links for: today, latest, all, or YYYY-MM-DD. The full archive is always refreshed.")
-    parser.add_argument("--base-url", default="", help="Public GitHub Pages base URL, without trailing slash.")
+    parser.add_argument("--base-url", default=DEFAULT_BASE_URL, help="Public GitHub Pages base URL, without trailing slash.")
     parser.add_argument("--push", action="store_true", help="Commit and push changes after publishing.")
     parser.add_argument("--dry-run", action="store_true", help="Show what would publish without writing files.")
     return parser.parse_args()
