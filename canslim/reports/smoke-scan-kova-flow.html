@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CANSLIM Scan 2026-05-19</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    main { max-width: 1200px; margin: 0 auto; padding: 32px 18px 64px; }
+    .summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 18px 0 24px; }
+    .metric, .candidate { background: #fff; border: 1px solid #dbe3ee; border-radius: 8px; }
+    .metric { padding: 14px 16px; }
+    .metric strong { display: block; font-size: 24px; margin-top: 4px; }
+    .candidate { margin: 18px 0; padding: 16px; }
+    .candidate h2 { margin: 0 0 10px; font-size: 22px; }
+    .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+    .pill { background: #edf2f8; border-radius: 999px; padding: 4px 9px; font-size: 13px; }
+    .chart { width: 100%; overflow-x: auto; }
+    svg { max-width: 100%; height: auto; }
+    table { width: 100%; border-collapse: collapse; background: white; margin-top: 12px; }
+    th, td { border: 1px solid #dbe3ee; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #edf2f8; }
+    .reasons { color: #43566f; font-size: 13px; line-height: 1.45; }
+    .empty { padding: 16px; background: #fff; border: 1px solid #dbe3ee; border-radius: 8px; }
+    @media (max-width: 720px) { .summary { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body><main>
+  <p class="crumbs"><a href="../../index.html">Reports</a> / CANSLIM Scan 2026-05-19</p>
+  <h1>CANSLIM Scan 2026-05-19</h1>
+    <div class="summary">
+    <div class="metric">扫描股票<strong>6</strong></div>
+    <div class="metric">买入信号<strong>0</strong></div>
+    <div class="metric">市场风险<strong>high</strong></div>
+  </div>
+  <p>买入信号要求 candidate=true、setup 为 VCP breakout 或 Pocket Pivot、base>=80、score>=90；观察名单只是候选池，不等于订单。每个买入信号显示最近 100 个交易日 K 线，蓝线为 pivot，红线为 initial stop。</p>
+  <h2>Main Buy Setups</h2>
+  <div class="empty">No actionable buy setups found.</div>
+  <h2>Watchlist / Too Early</h2>
+  <table><thead><tr><th>ticker</th><th>score</th><th>close</th><th>rs_percentile</th><th>adr20</th><th>base_score</th><th>fund_count</th><th>fund_count_change</th><th>setup</th><th>pivot</th><th>initial_stop</th><th>reject_reasons</th></tr></thead><tbody><tr><td>CIEN</td><td>81.0</td><td>514.47</td><td>100.0</td><td>6.23</td><td>100.0</td><td>None</td><td>None</td><td>vcp_watchlist</td><td>598.84</td><td>489.03</td><td></td></tr><tr><td>ALAB</td><td>76.0</td><td>244.26</td><td>20.0</td><td>8.73</td><td>80.0</td><td>None</td><td>None</td><td>vcp_breakout</td><td>239.76</td><td>238.57</td><td>rs_below_threshold</td></tr><tr><td>AMD</td><td>66.0</td><td>404.77</td><td>60.0</td><td>5.7</td><td>60.0</td><td>None</td><td>None</td><td>vcp_watchlist</td><td>469.21</td><td>385.49</td><td>rs_below_threshold</td></tr><tr><td>ECG</td><td>66.0</td><td>146.26</td><td>0.0</td><td>5.14</td><td>80.0</td><td>None</td><td>None</td><td>vcp_watchlist</td><td>171.58</td><td>136.85</td><td>rs_below_threshold</td></tr></tbody></table>
+  <h2>Rejected / Reference</h2>
+  <table><thead><tr><th>ticker</th><th>score</th><th>close</th><th>rs_percentile</th><th>adr20</th><th>base_score</th><th>fund_count</th><th>fund_count_change</th><th>setup</th><th>pivot</th><th>initial_stop</th><th>reject_reasons</th></tr></thead><tbody><tr><td>COHR</td><td>56.0</td><td>349.14</td><td>80.0</td><td>7.49</td><td>100.0</td><td>None</td><td>None</td><td>none</td><td>413.0</td><td>345.61</td><td>rs_below_threshold</td></tr><tr><td>AMKR</td><td>56.0</td><td>64.45</td><td>40.0</td><td>5.96</td><td>100.0</td><td>None</td><td>None</td><td>none</td><td>79.23</td><td>61.2</td><td>rs_below_threshold</td></tr></tbody></table>
+</main></body>
+</html>
