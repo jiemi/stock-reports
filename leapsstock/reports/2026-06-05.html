@@ -43,7 +43,7 @@
   <li><b>进入评分</b>：666（过滤掉 OI &lt; 1000 的低流动性标的）</li>
   <li><b>Top N</b>：20</li>
   <li><b>数据交易日</b>：<code>2026-06-05</code></li>
-  <li><b>报告生成时间</b>：<code>2026-06-07 21:44:51</code></li>
+  <li><b>报告生成时间</b>：<code>2026-06-08 09:12:20</code></li>
   <li><b>数据模式</b>：<code>周环比可用 (18 天)</code></li>
 </ul>
 
@@ -70,121 +70,131 @@
   <td>1</td>
   <td class="ticker">TSLA</td>
   <td><span class="grade">A</span> 强信号</td>
-  <td class="score">90.0</td>
+  <td class="score">86.0</td>
   <td>85.7</td>
   <td>58.2</td>
-  <td>Call OI 净增 99,385 张且环比 +5.9%；bullish_skew 达 50，Put 新增仅 1,851；7 个到期日且 top_expiry_share 37.1%；IV +3.76pp 与 OI 增量互相印证，Vol/OI 3.19% 合理。</td>
-  <td>block_oi_share 97.1% 偏高，需防单一大单解释，但到期日扩散明显，风险可接受。</td>
+  <td>新增 Call OI +99,385 张、环比 +5.9% 同时具备绝对量级与有效占比，居全样本之首；Put 仅增 1,851，偏度满格 50，方向极纯；Block 占比 97%/13 个合约显示非散户大单；到期日 7 个、top_expiry_share 0.37 扩散健康，非单一事件；IV 温和 +3.76pp 与 OI 增量互相印证；Vol/OI 0.032 流动性正常。</td>
+  <td>存量 OI 已极高(1.7M)，+5.9% 中部分或含滚动；IV 上行幅度温和，若后续无新增 OI 跟进需重新评估。</td>
 </tr>
 <tr>
   <td>2</td>
-  <td class="ticker">CELH</td>
-  <td><span class="grade">A</span> 强信号</td>
-  <td class="score">82.0</td>
-  <td>80.5</td>
-  <td>57.8</td>
-  <td>Call OI 净增 6,392 张、环比 +2.9%；bullish_skew 10.1，Put 同步新增较低；11 个 block、block_oi_share 65.5%；5 个到期日且 top_expiry_share 37.5%；IV +5.52pp，Vol/OI 3.79% 合理。</td>
-  <td>绝对 OI 增量不如 TSLA/BAC 大，但结构质量较高。</td>
+  <td class="ticker">COIN</td>
+  <td><span class="grade">A</span> 可跟踪</td>
+  <td class="score">73.0</td>
+  <td>83.2</td>
+  <td>63.0</td>
+  <td>Call OI +13,542、环比 +6.9% 为全样本最高占比之一；Put 仅 1,759，偏度 7.7 单边；Block 95%/3 个合约有大单痕迹；IV +12.26pp 与 OI 同向印证。</td>
+  <td>expiry_count 仅 2 且 top_expiry_share 0.93，几乎全压单一到期日，事件交易概率显著；IV 跳升过大需警惕环境驱动。</td>
 </tr>
 <tr>
   <td>3</td>
-  <td class="ticker">BAC</td>
-  <td><span class="grade">A</span> 强信号</td>
-  <td class="score">78.0</td>
-  <td>76.5</td>
-  <td>62.0</td>
-  <td>Call OI 净增 10,704 张、环比 +1.7%；bullish_skew 5.2，Put 新增可控；9 个 block、block_oi_share 57.9%；8 个到期日且 top_expiry_share 44.9%；IV +2.16pp，Vol/OI 3.02% 合理。</td>
-  <td>看涨偏度不是极端单边，强度低于 TSLA/CELH。</td>
+  <td class="ticker">CELH</td>
+  <td><span class="grade">A</span> 可跟踪</td>
+  <td class="score">72.0</td>
+  <td>80.5</td>
+  <td>57.8</td>
+  <td>Call OI +6,392、环比 +2.9%；Put 仅 635，偏度 10 单边；Block 66%/11 个合约数量充足；expiry_count 5、top_expiry_share 0.375 扩散良好；IV +5.52pp 印证。</td>
+  <td>绝对新增量级中等，环比未及高位；中盘消费股，需关注流动性与单一财报事件影响。</td>
 </tr>
 <tr>
   <td>4</td>
-  <td class="ticker">CMCSA</td>
-  <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">72.0</td>
-  <td>72.3</td>
-  <td>56.8</td>
-  <td>Call OI 净增 6,566 张、环比 +2.2%；bullish_skew 7.7；8 个 block、block_oi_share 88.2%；4 个到期日，top_expiry_share 51.2%；IV +1.50pp。</td>
-  <td>Vol/OI 1.12% 偏低，IV 上行幅度温和，需后续确认成交延续。</td>
+  <td class="ticker">BAC</td>
+  <td><span class="grade">A</span> 可跟踪</td>
+  <td class="score">66.0</td>
+  <td>76.5</td>
+  <td>62.0</td>
+  <td>Call OI +10,704、环比 +1.7%；expiry_count 8、top_expiry_share 0.45 为全样本最分散之一，符合真实建仓特征；Block 58%/9 个合约；IV +2.16pp 温和。</td>
+  <td>Put 增 2,047、偏度仅 5.2，方向纯度一般；环比相对庞大存量偏低，部分或为滚动。</td>
 </tr>
 <tr>
   <td>5</td>
   <td class="ticker">META</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">70.0</td>
+  <td class="score">64.0</td>
   <td>72.9</td>
   <td>50.1</td>
-  <td>Call OI 净增 16,030 张；bullish_skew 17.6；6 个 block、block_oi_share 89.4%；IV +4.24pp，Vol/OI 3.75% 合理。</td>
-  <td>top_expiry_share 77.5%，新增 OI 过度集中，事件交易或单一到期日交易概率偏高。</td>
+  <td>Call OI +16,030、Put 仅 913，偏度 17.6 强单边；Block 89%/6 个合约;IV +4.24pp 印证。</td>
+  <td>top_expiry_share 0.77，新增 OI 高度集中(JSON 已标事件风险)；环比 +1.2% 相对千万级存量微弱。</td>
 </tr>
 <tr>
   <td>6</td>
   <td class="ticker">U</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">68.0</td>
+  <td class="score">64.0</td>
   <td>62.4</td>
   <td>49.8</td>
-  <td>Call OI 净增 2,759 张、环比 +1.4%；Put 新增仅 28，bullish_skew 达 50；2 个 block 且 block_oi_share 97.1%；top_expiry_share 50.8%；IV +4.72pp，Vol/OI 1.88% 合理。</td>
-  <td>只有 2 个到期日，block 占比过高，仍需后续 OI 扩散确认。</td>
+  <td>Call OI +2,759、Put 仅 28，偏度满格 50；Block 97%/2 个合约大单痕迹明显；expiry_count 2、top_expiry_share 0.51 跨两到期日尚可。</td>
+  <td>绝对量级小、Vol/OI 0.019 流动性偏弱；仅 2 个合约支撑 Block，样本薄。</td>
 </tr>
 <tr>
   <td>7</td>
   <td class="ticker">SMCI</td>
   <td><span class="grade">A</span> 可跟踪</td>
-  <td class="score">67.0</td>
+  <td class="score">63.0</td>
   <td>79.7</td>
   <td>57.8</td>
-  <td>Call OI 净增 6,676 张；bullish_skew 12.7；4 个 block、block_oi_share 59.6%；5 个到期日；IV +9.23pp，Vol/OI 3.47% 合理。</td>
-  <td>Call OI 环比仅 +0.5%，top_expiry_share 68.4% 偏集中，IV 上行较强但 OI 增幅相对一般。</td>
+  <td>Call OI +6,676、Put 仅 524，偏度 12.7 单边；Block 60%/4；IV +9.23pp。</td>
+  <td>环比仅 +0.5%(存量 487k)，新增占比可忽略；top_expiry_share 0.68 偏集中，性价比有限。</td>
 </tr>
 <tr>
   <td>8</td>
-  <td class="ticker">MU</td>
-  <td><span class="grade">A</span> 可跟踪</td>
-  <td class="score">65.0</td>
-  <td>77.1</td>
-  <td>55.8</td>
-  <td>Call OI 净增 12,425 张；35 个 block、block_oi_share 44.4%；6 个到期日且 top_expiry_share 49.6%；IV +11.00pp。</td>
-  <td>Put OI 同步新增 5,384 张，bullish_skew 仅 2.3；Vol/OI 7.82% 偏高，更像组合或滚动交易混入。</td>
+  <td class="ticker">BSX</td>
+  <td><span class="grade">B</span> 可跟踪</td>
+  <td class="score">62.0</td>
+  <td>65.7</td>
+  <td>64.9</td>
+  <td>Call OI +4,089、Put 仅 163，偏度 25 强单边；Block 92%/3；z-score 1.8。</td>
+  <td>expiry_count 3、top_expiry_share 0.89 高度集中(已标事件风险)；环比 +1.2% 偏低。</td>
 </tr>
 <tr>
   <td>9</td>
-  <td class="ticker">MCHP</td>
+  <td class="ticker">CMCSA</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">64.0</td>
-  <td>69.8</td>
-  <td>53.8</td>
-  <td>Call OI 净增 1,181 张、环比 +4.5%；bullish_skew 14.1；3 个 block、block_oi_share 63.8%；2 个到期日且 top_expiry_share 52.3%；IV +6.83pp，Vol/OI 4.82% 尚可。</td>
-  <td>LEAPS Call OI 仅 27,389 张，流动性偏弱，绝对增量较小。</td>
+  <td class="score">62.0</td>
+  <td>72.3</td>
+  <td>56.8</td>
+  <td>Call OI +6,566、环比 +2.2%、z-score 1.0；Block 88%/8 个合约；expiry_count 4、top_expiry_share 0.51 扩散尚可。</td>
+  <td>Vol/OI 仅 0.011 为全样本最低，流动性薄、可能为清算滞后或挂单；IV +1.5pp 印证偏弱。</td>
 </tr>
 <tr>
   <td>10</td>
-  <td class="ticker">COIN</td>
-  <td><span class="grade">A</span> 可跟踪</td>
-  <td class="score">63.0</td>
-  <td>83.2</td>
-  <td>63.0</td>
-  <td>Call OI 净增 13,542 张、环比 +6.9%；bullish_skew 7.7；block_oi_share 95.2%；IV +12.26pp，Vol/OI 4.84% 合理。</td>
-  <td>只有 2 个到期日，top_expiry_share 93.0%，更像单一事件或集中交易，不能按强信号处理。</td>
+  <td class="ticker">TEM</td>
+  <td><span class="grade">B</span> 可跟踪</td>
+  <td class="score">61.0</td>
+  <td>72.3</td>
+  <td>51.8</td>
+  <td>Call OI +3,082、环比 +3.6%；Put 仅 9，偏度满格 50；Block 85%/2。</td>
+  <td>expiry_count 2、top_expiry_share 0.95 几近单一到期日；仅 2 合约、绝对量小，事件交易概率高。</td>
 </tr>
 <tr>
   <td>11</td>
-  <td class="ticker">BSX</td>
+  <td class="ticker">UWMC</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">61.0</td>
-  <td>65.7</td>
-  <td>64.9</td>
-  <td>Call OI 净增 4,089 张；bullish_skew 25.1；3 个 block、block_oi_share 92.3%；IV +4.11pp，Vol/OI 1.54% 可接受。</td>
-  <td>3 个到期日但 top_expiry_share 89.2%，集中度过高，需等待更多到期日共振。</td>
+  <td class="score">60.0</td>
+  <td>65.4</td>
+  <td>64.5</td>
+  <td>Call OI +2,157、环比 +2.2%；Put 仅 167，偏度 12.9；Block 74%/4；IV +10.69pp。</td>
+  <td>Vol/OI 仅 0.0075 极低，流动性差；top_expiry_share 0.76 偏集中。</td>
 </tr>
 <tr>
   <td>12</td>
-  <td class="ticker">GOOG</td>
+  <td class="ticker">ZTS</td>
+  <td><span class="grade">C</span> 可跟踪</td>
+  <td class="score">60.0</td>
+  <td>57.3</td>
+  <td>55.7</td>
+  <td>Call OI +2,995、环比 +5.2% 占比高；Put 仅 54，偏度满格 50；Block 91%/2。</td>
+  <td>expiry_count 1、top_expiry_share 1.0 完全集中(已标事件风险)；IV 仅 +2.18pp 印证弱。</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td class="ticker">MCHP</td>
   <td><span class="grade">B</span> 可跟踪</td>
   <td class="score">60.0</td>
-  <td>67.0</td>
-  <td>54.8</td>
-  <td>Call OI 净增 5,316 张；13 个 block、block_oi_share 57.6%；5 个到期日；IV +5.77pp，Vol/OI 2.65% 合理。</td>
-  <td>Put OI 同步新增 2,315 张，bullish_skew 仅 2.3；top_expiry_share 62.2% 偏集中。</td>
+  <td>69.8</td>
+  <td>53.8</td>
+  <td>Call OI +1,181、环比 +4.5%；Put 仅 84，偏度 14 单边；Block 64%/3；IV +6.83pp。</td>
+  <td>绝对量级很小、expiry_count 2；新增多依赖少数合约，确认度有限。</td>
 </tr>
 
 </tbody>
@@ -199,7 +209,7 @@
   <td>1</td>
   <td class="ticker">TSLA</td>
   <td>Consumer Discretionary</td>
-  <td class="score">90.0</td>
+  <td class="score">86.0</td>
   <td>85.7</td>
   <td class="score">58.2</td>
   <td><span class="pos">+5.9%</span></td>
@@ -212,9 +222,24 @@
 </tr>
 <tr>
   <td>2</td>
+  <td class="ticker">COIN</td>
+  <td>Financials</td>
+  <td class="score">73.0</td>
+  <td>83.2</td>
+  <td class="score">63.0</td>
+  <td><span class="pos">+6.9%</span></td>
+  <td><span class="pos">+12.26pp</span></td>
+  <td><span class="pos">7.7</span></td>
+  <td><span class="pos">⚡95% (3)</span></td>
+  <td>2</td>
+  <td><span class="">0.05</span></td>
+  <td>207,394</td>
+</tr>
+<tr>
+  <td>3</td>
   <td class="ticker">CELH</td>
   <td>Consumer Staples</td>
-  <td class="score">82.0</td>
+  <td class="score">72.0</td>
   <td>80.5</td>
   <td class="score">57.8</td>
   <td><span class="pos">+2.9%</span></td>
@@ -226,10 +251,10 @@
   <td>198,981</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>4</td>
   <td class="ticker">BAC</td>
   <td>Financials</td>
-  <td class="score">78.0</td>
+  <td class="score">66.0</td>
   <td>76.5</td>
   <td class="score">62.0</td>
   <td><span class="pos">+1.7%</span></td>
@@ -241,25 +266,10 @@
   <td>494,751</td>
 </tr>
 <tr>
-  <td>4</td>
-  <td class="ticker">CMCSA</td>
-  <td>Communication Services</td>
-  <td class="score">72.0</td>
-  <td>72.3</td>
-  <td class="score">56.8</td>
-  <td><span class="pos">+2.2%</span></td>
-  <td><span class="pos">+1.50pp</span></td>
-  <td><span class="pos">7.7</span></td>
-  <td><span class="pos">⚡88% (8)</span></td>
-  <td>4</td>
-  <td><span class="">0.01</span></td>
-  <td>298,364</td>
-</tr>
-<tr>
   <td>5</td>
   <td class="ticker">META</td>
   <td>Technology</td>
-  <td class="score">70.0</td>
+  <td class="score">64.0</td>
   <td>72.9</td>
   <td class="score">50.1</td>
   <td><span class="pos">+1.2%</span></td>
@@ -274,7 +284,7 @@
   <td>6</td>
   <td class="ticker">U</td>
   <td>Technology</td>
-  <td class="score">68.0</td>
+  <td class="score">64.0</td>
   <td>62.4</td>
   <td class="score">49.8</td>
   <td><span class="pos">+1.4%</span></td>
@@ -289,7 +299,7 @@
   <td>7</td>
   <td class="ticker">SMCI</td>
   <td>Technology</td>
-  <td class="score">67.0</td>
+  <td class="score">63.0</td>
   <td>79.7</td>
   <td class="score">57.8</td>
   <td><span class="pos">+0.5%</span></td>
@@ -302,54 +312,9 @@
 </tr>
 <tr>
   <td>8</td>
-  <td class="ticker">MU</td>
-  <td>Technology</td>
-  <td class="score">65.0</td>
-  <td>77.1</td>
-  <td class="score">55.8</td>
-  <td><span class="pos">+1.5%</span></td>
-  <td><span class="pos">+11.00pp</span></td>
-  <td><span class="neutral">2.3</span></td>
-  <td><span class="pos">⚡44% (35)</span></td>
-  <td>6</td>
-  <td><span class="">0.08</span></td>
-  <td>613,563</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td class="ticker">MCHP</td>
-  <td>Technology</td>
-  <td class="score">64.0</td>
-  <td>69.8</td>
-  <td class="score">53.8</td>
-  <td><span class="pos">+4.5%</span></td>
-  <td><span class="pos">+6.83pp</span></td>
-  <td><span class="pos">14.1</span></td>
-  <td><span class="pos">⚡64% (3)</span></td>
-  <td>2</td>
-  <td><span class="">0.05</span></td>
-  <td>27,389</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td class="ticker">COIN</td>
-  <td>Financials</td>
-  <td class="score">63.0</td>
-  <td>83.2</td>
-  <td class="score">63.0</td>
-  <td><span class="pos">+6.9%</span></td>
-  <td><span class="pos">+12.26pp</span></td>
-  <td><span class="pos">7.7</span></td>
-  <td><span class="pos">⚡95% (3)</span></td>
-  <td>2</td>
-  <td><span class="">0.05</span></td>
-  <td>207,394</td>
-</tr>
-<tr>
-  <td>11</td>
   <td class="ticker">BSX</td>
   <td>Healthcare</td>
-  <td class="score">61.0</td>
+  <td class="score">62.0</td>
   <td>65.7</td>
   <td class="score">64.9</td>
   <td><span class="pos">+1.2%</span></td>
@@ -361,25 +326,25 @@
   <td>326,646</td>
 </tr>
 <tr>
-  <td>12</td>
-  <td class="ticker">GOOG</td>
-  <td>Technology</td>
-  <td class="score">60.0</td>
-  <td>67.0</td>
-  <td class="score">54.8</td>
-  <td><span class="pos">+1.1%</span></td>
-  <td><span class="pos">+5.77pp</span></td>
-  <td><span class="neutral">2.3</span></td>
-  <td><span class="pos">⚡58% (13)</span></td>
-  <td>5</td>
-  <td><span class="">0.03</span></td>
-  <td>424,966</td>
+  <td>9</td>
+  <td class="ticker">CMCSA</td>
+  <td>Communication Services</td>
+  <td class="score">62.0</td>
+  <td>72.3</td>
+  <td class="score">56.8</td>
+  <td><span class="pos">+2.2%</span></td>
+  <td><span class="pos">+1.50pp</span></td>
+  <td><span class="pos">7.7</span></td>
+  <td><span class="pos">⚡88% (8)</span></td>
+  <td>4</td>
+  <td><span class="">0.01</span></td>
+  <td>298,364</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>10</td>
   <td class="ticker">TEM</td>
   <td>Technology</td>
-  <td class="score">59.0</td>
+  <td class="score">61.0</td>
   <td>72.3</td>
   <td class="score">51.8</td>
   <td><span class="pos">+3.6%</span></td>
@@ -391,10 +356,10 @@
   <td>76,272</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>11</td>
   <td class="ticker">UWMC</td>
   <td>Financials</td>
-  <td class="score">58.0</td>
+  <td class="score">60.0</td>
   <td>65.4</td>
   <td class="score">64.5</td>
   <td><span class="pos">+2.2%</span></td>
@@ -406,25 +371,10 @@
   <td>98,497</td>
 </tr>
 <tr>
-  <td>15</td>
-  <td class="ticker">PYPL</td>
-  <td>Industrials</td>
-  <td class="score">57.0</td>
-  <td>60.6</td>
-  <td class="score">48.8</td>
-  <td><span class="pos">+0.5%</span></td>
-  <td><span class="pos">+3.56pp</span></td>
-  <td><span class="pos">3.6</span></td>
-  <td><span class="pos">⚡43% (3)</span></td>
-  <td>3</td>
-  <td><span class="">0.02</span></td>
-  <td>852,973</td>
-</tr>
-<tr>
-  <td>16</td>
+  <td>12</td>
   <td class="ticker">ZTS</td>
   <td>Healthcare</td>
-  <td class="score">56.0</td>
+  <td class="score">60.0</td>
   <td>57.3</td>
   <td class="score">55.7</td>
   <td><span class="pos">+5.2%</span></td>
@@ -436,10 +386,25 @@
   <td>59,146</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>13</td>
+  <td class="ticker">MCHP</td>
+  <td>Technology</td>
+  <td class="score">60.0</td>
+  <td>69.8</td>
+  <td class="score">53.8</td>
+  <td><span class="pos">+4.5%</span></td>
+  <td><span class="pos">+6.83pp</span></td>
+  <td><span class="pos">14.1</span></td>
+  <td><span class="pos">⚡64% (3)</span></td>
+  <td>2</td>
+  <td><span class="">0.05</span></td>
+  <td>27,389</td>
+</tr>
+<tr>
+  <td>14</td>
   <td class="ticker">TJX</td>
   <td>Consumer Discretionary</td>
-  <td class="score">56.0</td>
+  <td class="score">nan</td>
   <td>57.8</td>
   <td class="score">54.2</td>
   <td><span class="pos">+2.7%</span></td>
@@ -451,49 +416,94 @@
   <td>21,747</td>
 </tr>
 <tr>
-  <td>18</td>
-  <td class="ticker">GOOGL</td>
+  <td>15</td>
+  <td class="ticker">GOOG</td>
   <td>Technology</td>
-  <td class="score">56.0</td>
-  <td>54.8</td>
-  <td class="score">48.8</td>
+  <td class="score">57.0</td>
+  <td>67.0</td>
+  <td class="score">54.8</td>
   <td><span class="pos">+1.1%</span></td>
-  <td><span class="pos">+2.35pp</span></td>
-  <td><span class="neutral">1.5</span></td>
-  <td><span class="pos">⚡51% (16)</span></td>
-  <td>8</td>
+  <td><span class="pos">+5.77pp</span></td>
+  <td><span class="neutral">2.3</span></td>
+  <td><span class="pos">⚡58% (13)</span></td>
+  <td>5</td>
   <td><span class="">0.03</span></td>
-  <td>765,668</td>
+  <td>424,966</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td class="ticker">MU</td>
+  <td>Technology</td>
+  <td class="score">55.0</td>
+  <td>77.1</td>
+  <td class="score">55.8</td>
+  <td><span class="pos">+1.5%</span></td>
+  <td><span class="pos">+11.00pp</span></td>
+  <td><span class="neutral">2.3</span></td>
+  <td><span class="pos">⚡44% (35)</span></td>
+  <td>6</td>
+  <td><span class="">0.08</span></td>
+  <td>613,563</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td class="ticker">M</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">55.0</td>
+  <td>55.6</td>
+  <td class="score">49.0</td>
+  <td><span class="pos">+6.8%</span></td>
+  <td><span class="pos">+7.20pp</span></td>
+  <td><span class="pos">11.7</span></td>
+  <td><span class="">16% (1)</span></td>
+  <td>1</td>
+  <td><span class="">0.07</span></td>
+  <td>22,885</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td class="ticker">P</td>
+  <td>Technology</td>
+  <td class="score">55.0</td>
+  <td>56.4</td>
+  <td class="score">46.0</td>
+  <td><span class="pos">+3.8%</span></td>
+  <td><span class="pos">+4.27pp</span></td>
+  <td><span class="pos">32.0</span></td>
+  <td><span class="pos">⚡96% (2)</span></td>
+  <td>1</td>
+  <td><span class="">0.03</span></td>
+  <td>33,310</td>
 </tr>
 <tr>
   <td>19</td>
-  <td class="ticker">HPE</td>
-  <td>Technology</td>
-  <td class="score">55.0</td>
-  <td>68.2</td>
-  <td class="score">59.8</td>
-  <td><span class="pos">+1.1%</span></td>
-  <td><span class="pos">+22.96pp</span></td>
-  <td><span class="pos">3.9</span></td>
-  <td><span class="pos">⚡34% (2)</span></td>
-  <td>3</td>
-  <td><span class="">0.07</span></td>
-  <td>70,646</td>
+  <td class="ticker">ASTS</td>
+  <td>Communication Services</td>
+  <td class="score">nan</td>
+  <td>54.4</td>
+  <td class="score">48.2</td>
+  <td><span class="pos">+0.2%</span></td>
+  <td><span class="pos">+8.39pp</span></td>
+  <td><span class="neutral">2.9</span></td>
+  <td><span class="">15% (3)</span></td>
+  <td>2</td>
+  <td><span class="">0.03</span></td>
+  <td>286,459</td>
 </tr>
 <tr>
   <td>20</td>
-  <td class="ticker">PLTR</td>
-  <td>Technology</td>
-  <td class="score">55.0</td>
-  <td>63.4</td>
-  <td class="score">52.8</td>
-  <td><span class="pos">+0.6%</span></td>
-  <td><span class="pos">+5.64pp</span></td>
-  <td><span class="neutral">2.0</span></td>
-  <td><span class="pos">⚡38% (7)</span></td>
-  <td>3</td>
-  <td><span class="">0.03</span></td>
-  <td>736,648</td>
+  <td class="ticker">APA</td>
+  <td>Energy</td>
+  <td class="score">nan</td>
+  <td>54.3</td>
+  <td class="score">67.0</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+5.84pp</span></td>
+  <td><span class="pos">11.9</span></td>
+  <td><span class="pos">⚡71% (1)</span></td>
+  <td>1</td>
+  <td><span class="">0.04</span></td>
+  <td>72,651</td>
 </tr>
 
 </tbody>
@@ -523,6 +533,16 @@
   <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
+  <td class="ticker">COIN</td>
+  <td>0.85 → <b>12.8</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>1.00 → <b>20.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.85 → <b>8.5</b></td>
+  <td>0.30 → <b>3.0</b></td>
+</tr>
+<tr>
   <td class="ticker">CELH</td>
   <td>0.20 → <b>3.0</b></td>
   <td>0.40 → <b>8.0</b></td>
@@ -537,16 +557,6 @@
   <td>0.85 → <b>12.8</b></td>
   <td>0.40 → <b>8.0</b></td>
   <td>0.65 → <b>13.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.85 → <b>8.5</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">CMCSA</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.65 → <b>13.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
   <td>0.05 → <b>0.8</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>0.85 → <b>8.5</b></td>
@@ -583,36 +593,6 @@
   <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">MU</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>1.00 → <b>20.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>0.80 → <b>8.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">MCHP</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.85 → <b>17.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.50 → <b>5.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">COIN</td>
-  <td>0.85 → <b>12.8</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>1.00 → <b>20.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.85 → <b>8.5</b></td>
-  <td>0.30 → <b>3.0</b></td>
-</tr>
-<tr>
   <td class="ticker">BSX</td>
   <td>0.85 → <b>12.8</b></td>
   <td>0.65 → <b>13.0</b></td>
@@ -623,13 +603,13 @@
   <td>0.54 → <b>5.4</b></td>
 </tr>
 <tr>
-  <td class="ticker">GOOG</td>
-  <td>0.20 → <b>3.0</b></td>
+  <td class="ticker">CMCSA</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.65 → <b>13.0</b></td>
   <td>0.40 → <b>8.0</b></td>
-  <td>0.85 → <b>17.0</b></td>
   <td>0.05 → <b>0.8</b></td>
   <td>1.00 → <b>10.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
+  <td>0.85 → <b>8.5</b></td>
   <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
@@ -653,16 +633,6 @@
   <td>0.30 → <b>3.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">PYPL</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.65 → <b>13.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>0.80 → <b>8.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
   <td class="ticker">ZTS</td>
   <td>0.85 → <b>12.8</b></td>
   <td>0.40 → <b>8.0</b></td>
@@ -671,6 +641,16 @@
   <td>1.00 → <b>10.0</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>0.12 → <b>1.2</b></td>
+</tr>
+<tr>
+  <td class="ticker">MCHP</td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.85 → <b>17.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.50 → <b>5.0</b></td>
 </tr>
 <tr>
   <td class="ticker">TJX</td>
@@ -683,34 +663,64 @@
   <td>0.50 → <b>5.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">GOOGL</td>
+  <td class="ticker">GOOG</td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.85 → <b>17.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.70 → <b>7.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">MU</td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>1.00 → <b>20.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>0.80 → <b>8.0</b></td>
+  <td>0.70 → <b>7.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">M</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.85 → <b>17.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>0.45 → <b>4.5</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.12 → <b>1.2</b></td>
+</tr>
+<tr>
+  <td class="ticker">P</td>
   <td>0.20 → <b>3.0</b></td>
   <td>0.40 → <b>8.0</b></td>
   <td>0.65 → <b>13.0</b></td>
   <td>0.05 → <b>0.8</b></td>
   <td>1.00 → <b>10.0</b></td>
-  <td>0.50 → <b>5.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.12 → <b>1.2</b></td>
 </tr>
 <tr>
-  <td class="ticker">HPE</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.65 → <b>13.0</b></td>
-  <td>1.00 → <b>20.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">PLTR</td>
-  <td>0.20 → <b>3.0</b></td>
+  <td class="ticker">ASTS</td>
+  <td>0.50 → <b>7.5</b></td>
   <td>0.40 → <b>8.0</b></td>
   <td>0.85 → <b>17.0</b></td>
   <td>0.05 → <b>0.8</b></td>
-  <td>0.80 → <b>8.0</b></td>
+  <td>0.30 → <b>3.0</b></td>
   <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
+  <td>0.50 → <b>5.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">APA</td>
+  <td>1.00 → <b>15.0</b></td>
+  <td>0.65 → <b>13.0</b></td>
+  <td>0.85 → <b>17.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.12 → <b>1.2</b></td>
 </tr>
 
 </tbody>
@@ -731,6 +741,16 @@
   <td>37%</td>
 </tr>
 <tr>
+  <td class="ticker">COIN</td>
+  <td>13,542</td>
+  <td>1,759</td>
+  <td>7.7</td>
+  <td>3</td>
+  <td>95%</td>
+  <td>2</td>
+  <td>93%</td>
+</tr>
+<tr>
   <td class="ticker">CELH</td>
   <td>6,392</td>
   <td>635</td>
@@ -749,16 +769,6 @@
   <td>58%</td>
   <td>8</td>
   <td>45%</td>
-</tr>
-<tr>
-  <td class="ticker">CMCSA</td>
-  <td>6,566</td>
-  <td>850</td>
-  <td>7.7</td>
-  <td>8</td>
-  <td>88%</td>
-  <td>4</td>
-  <td>51%</td>
 </tr>
 <tr>
   <td class="ticker">META</td>
@@ -791,36 +801,6 @@
   <td>68%</td>
 </tr>
 <tr>
-  <td class="ticker">MU</td>
-  <td>12,425</td>
-  <td>5,384</td>
-  <td>2.3</td>
-  <td>35</td>
-  <td>44%</td>
-  <td>6</td>
-  <td>50%</td>
-</tr>
-<tr>
-  <td class="ticker">MCHP</td>
-  <td>1,181</td>
-  <td>84</td>
-  <td>14.1</td>
-  <td>3</td>
-  <td>64%</td>
-  <td>2</td>
-  <td>52%</td>
-</tr>
-<tr>
-  <td class="ticker">COIN</td>
-  <td>13,542</td>
-  <td>1,759</td>
-  <td>7.7</td>
-  <td>3</td>
-  <td>95%</td>
-  <td>2</td>
-  <td>93%</td>
-</tr>
-<tr>
   <td class="ticker">BSX</td>
   <td>4,089</td>
   <td>163</td>
@@ -831,14 +811,14 @@
   <td>89%</td>
 </tr>
 <tr>
-  <td class="ticker">GOOG</td>
-  <td>5,316</td>
-  <td>2,315</td>
-  <td>2.3</td>
-  <td>13</td>
-  <td>58%</td>
-  <td>5</td>
-  <td>62%</td>
+  <td class="ticker">CMCSA</td>
+  <td>6,566</td>
+  <td>850</td>
+  <td>7.7</td>
+  <td>8</td>
+  <td>88%</td>
+  <td>4</td>
+  <td>51%</td>
 </tr>
 <tr>
   <td class="ticker">TEM</td>
@@ -861,16 +841,6 @@
   <td>76%</td>
 </tr>
 <tr>
-  <td class="ticker">PYPL</td>
-  <td>4,590</td>
-  <td>1,273</td>
-  <td>3.6</td>
-  <td>3</td>
-  <td>43%</td>
-  <td>3</td>
-  <td>50%</td>
-</tr>
-<tr>
   <td class="ticker">ZTS</td>
   <td>2,995</td>
   <td>54</td>
@@ -879,6 +849,16 @@
   <td>91%</td>
   <td>1</td>
   <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">MCHP</td>
+  <td>1,181</td>
+  <td>84</td>
+  <td>14.1</td>
+  <td>3</td>
+  <td>64%</td>
+  <td>2</td>
+  <td>52%</td>
 </tr>
 <tr>
   <td class="ticker">TJX</td>
@@ -891,41 +871,71 @@
   <td>64%</td>
 </tr>
 <tr>
-  <td class="ticker">GOOGL</td>
-  <td>14,236</td>
-  <td>9,505</td>
-  <td>1.5</td>
-  <td>16</td>
-  <td>51%</td>
-  <td>8</td>
-  <td>24%</td>
+  <td class="ticker">GOOG</td>
+  <td>5,316</td>
+  <td>2,315</td>
+  <td>2.3</td>
+  <td>13</td>
+  <td>58%</td>
+  <td>5</td>
+  <td>62%</td>
 </tr>
 <tr>
-  <td class="ticker">HPE</td>
-  <td>1,101</td>
-  <td>279</td>
-  <td>3.9</td>
+  <td class="ticker">MU</td>
+  <td>12,425</td>
+  <td>5,384</td>
+  <td>2.3</td>
+  <td>35</td>
+  <td>44%</td>
+  <td>6</td>
+  <td>50%</td>
+</tr>
+<tr>
+  <td class="ticker">M</td>
+  <td>1,478</td>
+  <td>126</td>
+  <td>11.7</td>
+  <td>1</td>
+  <td>16%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">P</td>
+  <td>1,217</td>
+  <td>38</td>
+  <td>32.0</td>
   <td>2</td>
-  <td>34%</td>
-  <td>3</td>
-  <td>47%</td>
+  <td>96%</td>
+  <td>1</td>
+  <td>100%</td>
 </tr>
 <tr>
-  <td class="ticker">PLTR</td>
-  <td>4,795</td>
-  <td>2,365</td>
-  <td>2.0</td>
-  <td>7</td>
-  <td>38%</td>
+  <td class="ticker">ASTS</td>
+  <td>1,692</td>
+  <td>582</td>
+  <td>2.9</td>
   <td>3</td>
-  <td>48%</td>
+  <td>15%</td>
+  <td>2</td>
+  <td>55%</td>
+</tr>
+<tr>
+  <td class="ticker">APA</td>
+  <td>214</td>
+  <td>18</td>
+  <td>11.9</td>
+  <td>1</td>
+  <td>71%</td>
+  <td>1</td>
+  <td>100%</td>
 </tr>
 
 </tbody>
 </table>
 
 <h2>🏭 按行业分组</h2>
-<h3>Consumer Discretionary（2 只）</h3>
+<h3>Consumer Discretionary（3 只）</h3>
 <table>
 <thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
 <tbody>
@@ -971,6 +981,97 @@
     
   </td>
 </tr>
+<tr>
+  <td class="ticker">M</td>
+  <td class="score">49.0</td>
+  <td><span class="pos">+6.8%</span></td>
+  <td><span class="pos">+7.20pp</span></td>
+  <td><span class="pos">11.7</span></td>
+  <td><span class="">16% (1)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $30 / OI 2,722 / IV 49% / Vol 1<br>
+    
+      2027-01-15 / Strike $27 / OI 2,552 / IV 53% / Vol 1,194<br>
+    
+      2027-01-15 / Strike $13 / OI 2,296 / IV 62% / Vol 1<br>
+    
+      2027-01-15 / Strike $25 / OI 1,762 / IV 54% / Vol 8<br>
+    
+      2027-01-15 / Strike $15 / OI 1,511 / IV 67% / Vol 1<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Financials（3 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">COIN</td>
+  <td class="score">63.0</td>
+  <td><span class="pos">+6.9%</span></td>
+  <td><span class="pos">+12.26pp</span></td>
+  <td><span class="pos">7.7</span></td>
+  <td><span class="pos">⚡95% (3)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $880 / OI 13,565 / IV 95% / Vol 127<br>
+    
+      2027-01-15 / Strike $5 / OI 10,286 / IV 213% / Vol 2<br>
+    
+      2026-12-18 / Strike $300 / OI 4,247 / IV 79% / Vol 47<br>
+    
+      2027-01-15 / Strike $300 / OI 4,120 / IV 78% / Vol 384<br>
+    
+      2027-01-15 / Strike $200 / OI 3,463 / IV 78% / Vol 231<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">BAC</td>
+  <td class="score">62.0</td>
+  <td><span class="pos">+1.7%</span></td>
+  <td><span class="pos">+2.16pp</span></td>
+  <td><span class="pos">5.2</span></td>
+  <td><span class="pos">⚡58% (9)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $58 / OI 41,798 / IV 29% / Vol 135<br>
+    
+      2027-01-15 / Strike $50 / OI 26,863 / IV 31% / Vol 175<br>
+    
+      2027-01-15 / Strike $60 / OI 26,048 / IV 28% / Vol 122<br>
+    
+      2027-01-15 / Strike $47 / OI 25,605 / IV 33% / Vol 10<br>
+    
+      2027-01-15 / Strike $55 / OI 24,091 / IV 30% / Vol 158<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">UWMC</td>
+  <td class="score">64.5</td>
+  <td><span class="pos">+2.2%</span></td>
+  <td><span class="pos">+10.69pp</span></td>
+  <td><span class="pos">12.9</span></td>
+  <td><span class="pos">⚡74% (4)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $5 / OI 27,499 / IV 80% / Vol 44<br>
+    
+      2027-01-15 / Strike $7 / OI 14,659 / IV 96% / Vol 22<br>
+    
+      2027-01-15 / Strike $10 / OI 10,286 / IV 109% / Vol 4<br>
+    
+      2028-01-21 / Strike $7 / OI 9,889 / IV 96% / Vol 54<br>
+    
+      2028-01-21 / Strike $5 / OI 9,022 / IV 84% / Vol 52<br>
+    
+  </td>
+</tr>
 
 </tbody>
 </table>
@@ -1002,105 +1103,7 @@
 
 </tbody>
 </table>
-<h3>Financials（3 只）</h3>
-<table>
-<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
-<tbody>
-<tr>
-  <td class="ticker">BAC</td>
-  <td class="score">62.0</td>
-  <td><span class="pos">+1.7%</span></td>
-  <td><span class="pos">+2.16pp</span></td>
-  <td><span class="pos">5.2</span></td>
-  <td><span class="pos">⚡58% (9)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $58 / OI 41,798 / IV 29% / Vol 135<br>
-    
-      2027-01-15 / Strike $50 / OI 26,863 / IV 31% / Vol 175<br>
-    
-      2027-01-15 / Strike $60 / OI 26,048 / IV 28% / Vol 122<br>
-    
-      2027-01-15 / Strike $47 / OI 25,605 / IV 33% / Vol 10<br>
-    
-      2027-01-15 / Strike $55 / OI 24,091 / IV 30% / Vol 158<br>
-    
-  </td>
-</tr>
-<tr>
-  <td class="ticker">COIN</td>
-  <td class="score">63.0</td>
-  <td><span class="pos">+6.9%</span></td>
-  <td><span class="pos">+12.26pp</span></td>
-  <td><span class="pos">7.7</span></td>
-  <td><span class="pos">⚡95% (3)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $880 / OI 13,565 / IV 95% / Vol 127<br>
-    
-      2027-01-15 / Strike $5 / OI 10,286 / IV 213% / Vol 2<br>
-    
-      2026-12-18 / Strike $300 / OI 4,247 / IV 79% / Vol 47<br>
-    
-      2027-01-15 / Strike $300 / OI 4,120 / IV 78% / Vol 384<br>
-    
-      2027-01-15 / Strike $200 / OI 3,463 / IV 78% / Vol 231<br>
-    
-  </td>
-</tr>
-<tr>
-  <td class="ticker">UWMC</td>
-  <td class="score">64.5</td>
-  <td><span class="pos">+2.2%</span></td>
-  <td><span class="pos">+10.69pp</span></td>
-  <td><span class="pos">12.9</span></td>
-  <td><span class="pos">⚡74% (4)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $5 / OI 27,499 / IV 80% / Vol 44<br>
-    
-      2027-01-15 / Strike $7 / OI 14,659 / IV 96% / Vol 22<br>
-    
-      2027-01-15 / Strike $10 / OI 10,286 / IV 109% / Vol 4<br>
-    
-      2028-01-21 / Strike $7 / OI 9,889 / IV 96% / Vol 54<br>
-    
-      2028-01-21 / Strike $5 / OI 9,022 / IV 84% / Vol 52<br>
-    
-  </td>
-</tr>
-
-</tbody>
-</table>
-<h3>Communication Services（1 只）</h3>
-<table>
-<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
-<tbody>
-<tr>
-  <td class="ticker">CMCSA</td>
-  <td class="score">56.8</td>
-  <td><span class="pos">+2.2%</span></td>
-  <td><span class="pos">+1.50pp</span></td>
-  <td><span class="pos">7.7</span></td>
-  <td><span class="pos">⚡88% (8)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $30 / OI 78,191 / IV 39% / Vol 509<br>
-    
-      2027-01-15 / Strike $50 / OI 44,672 / IV 49% / Vol 2<br>
-    
-      2028-01-21 / Strike $35 / OI 38,203 / IV 42% / Vol 267<br>
-    
-      2027-01-15 / Strike $35 / OI 12,559 / IV 39% / Vol 25<br>
-    
-      2027-01-15 / Strike $42 / OI 11,366 / IV 44% / Vol 1<br>
-    
-  </td>
-</tr>
-
-</tbody>
-</table>
-<h3>Technology（10 只）</h3>
+<h3>Technology（8 只）</h3>
 <table>
 <thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
 <tbody>
@@ -1168,23 +1171,23 @@
   </td>
 </tr>
 <tr>
-  <td class="ticker">MU</td>
-  <td class="score">55.8</td>
-  <td><span class="pos">+1.5%</span></td>
-  <td><span class="pos">+11.00pp</span></td>
-  <td><span class="neutral">2.3</span></td>
-  <td><span class="pos">⚡44% (35)</span></td>
+  <td class="ticker">TEM</td>
+  <td class="score">51.8</td>
+  <td><span class="pos">+3.6%</span></td>
+  <td><span class="pos">+6.68pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡85% (2)</span></td>
   <td class="contracts">
     
-      2027-01-15 / Strike $500 / OI 5,996 / IV 101% / Vol 80<br>
+      2027-01-15 / Strike $100 / OI 12,095 / IV 82% / Vol 487<br>
     
-      2026-12-18 / Strike $700 / OI 4,733 / IV 96% / Vol 1,852<br>
+      2027-01-15 / Strike $70 / OI 6,578 / IV 79% / Vol 177<br>
     
-      2027-01-15 / Strike $600 / OI 4,494 / IV 96% / Vol 179<br>
+      2027-01-15 / Strike $60 / OI 4,852 / IV 78% / Vol 238<br>
     
-      2027-01-15 / Strike $90 / OI 4,470 / IV 208% / Vol 6<br>
+      2027-01-15 / Strike $120 / OI 3,374 / IV 85% / Vol 109<br>
     
-      2027-01-15 / Strike $900 / OI 4,356 / IV 94% / Vol 645<br>
+      2027-01-15 / Strike $75 / OI 3,333 / IV 78% / Vol 67<br>
     
   </td>
 </tr>
@@ -1231,86 +1234,44 @@
   </td>
 </tr>
 <tr>
-  <td class="ticker">TEM</td>
-  <td class="score">51.8</td>
-  <td><span class="pos">+3.6%</span></td>
-  <td><span class="pos">+6.68pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡85% (2)</span></td>
+  <td class="ticker">MU</td>
+  <td class="score">55.8</td>
+  <td><span class="pos">+1.5%</span></td>
+  <td><span class="pos">+11.00pp</span></td>
+  <td><span class="neutral">2.3</span></td>
+  <td><span class="pos">⚡44% (35)</span></td>
   <td class="contracts">
     
-      2027-01-15 / Strike $100 / OI 12,095 / IV 82% / Vol 487<br>
+      2027-01-15 / Strike $500 / OI 5,996 / IV 101% / Vol 80<br>
     
-      2027-01-15 / Strike $70 / OI 6,578 / IV 79% / Vol 177<br>
+      2026-12-18 / Strike $700 / OI 4,733 / IV 96% / Vol 1,852<br>
     
-      2027-01-15 / Strike $60 / OI 4,852 / IV 78% / Vol 238<br>
+      2027-01-15 / Strike $600 / OI 4,494 / IV 96% / Vol 179<br>
     
-      2027-01-15 / Strike $120 / OI 3,374 / IV 85% / Vol 109<br>
+      2027-01-15 / Strike $90 / OI 4,470 / IV 208% / Vol 6<br>
     
-      2027-01-15 / Strike $75 / OI 3,333 / IV 78% / Vol 67<br>
+      2027-01-15 / Strike $900 / OI 4,356 / IV 94% / Vol 645<br>
     
   </td>
 </tr>
 <tr>
-  <td class="ticker">GOOGL</td>
-  <td class="score">48.8</td>
-  <td><span class="pos">+1.1%</span></td>
-  <td><span class="pos">+2.35pp</span></td>
-  <td><span class="neutral">1.5</span></td>
-  <td><span class="pos">⚡51% (16)</span></td>
+  <td class="ticker">P</td>
+  <td class="score">46.0</td>
+  <td><span class="pos">+3.8%</span></td>
+  <td><span class="pos">+4.27pp</span></td>
+  <td><span class="pos">32.0</span></td>
+  <td><span class="pos">⚡96% (2)</span></td>
   <td class="contracts">
     
-      2026-12-18 / Strike $300 / OI 17,839 / IV 44% / Vol 30<br>
+      2028-01-21 / Strike $110 / OI 4,229 / IV 71% / Vol 13<br>
     
-      2028-01-21 / Strike $650 / OI 16,162 / IV 41% / Vol 169<br>
+      2027-01-15 / Strike $100 / OI 3,828 / IV 72% / Vol 34<br>
     
-      2027-01-15 / Strike $350 / OI 15,628 / IV 40% / Vol 292<br>
+      2027-01-15 / Strike $140 / OI 3,151 / IV 74% / Vol 103<br>
     
-      2026-12-18 / Strike $310 / OI 15,348 / IV 43% / Vol 15<br>
+      2027-01-15 / Strike $110 / OI 2,325 / IV 74% / Vol 56<br>
     
-      2028-01-21 / Strike $550 / OI 13,299 / IV 40% / Vol 7<br>
-    
-  </td>
-</tr>
-<tr>
-  <td class="ticker">HPE</td>
-  <td class="score">59.8</td>
-  <td><span class="pos">+1.1%</span></td>
-  <td><span class="pos">+22.96pp</span></td>
-  <td><span class="pos">3.9</span></td>
-  <td><span class="pos">⚡34% (2)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $35 / OI 10,724 / IV 80% / Vol 71<br>
-    
-      2028-01-21 / Strike $30 / OI 4,749 / IV 76% / Vol 5<br>
-    
-      2027-01-15 / Strike $30 / OI 4,181 / IV 85% / Vol 13<br>
-    
-      2027-01-15 / Strike $22 / OI 3,908 / IV 100% / Vol 3<br>
-    
-      2027-01-15 / Strike $65 / OI 3,603 / IV 74% / Vol 457<br>
-    
-  </td>
-</tr>
-<tr>
-  <td class="ticker">PLTR</td>
-  <td class="score">52.8</td>
-  <td><span class="pos">+0.6%</span></td>
-  <td><span class="pos">+5.64pp</span></td>
-  <td><span class="neutral">2.0</span></td>
-  <td><span class="pos">⚡38% (7)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $200 / OI 16,012 / IV 58% / Vol 1,027<br>
-    
-      2027-01-15 / Strike $150 / OI 14,714 / IV 59% / Vol 467<br>
-    
-      2027-01-15 / Strike $210 / OI 14,172 / IV 59% / Vol 278<br>
-    
-      2027-01-15 / Strike $160 / OI 13,431 / IV 59% / Vol 812<br>
-    
-      2027-01-15 / Strike $250 / OI 10,955 / IV 60% / Vol 644<br>
+      2027-01-15 / Strike $115 / OI 2,318 / IV 73% / Vol 9<br>
     
   </td>
 </tr>
@@ -1366,28 +1327,77 @@
 
 </tbody>
 </table>
-<h3>Industrials（1 只）</h3>
+<h3>Communication Services（2 只）</h3>
 <table>
 <thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
 <tbody>
 <tr>
-  <td class="ticker">PYPL</td>
-  <td class="score">48.8</td>
-  <td><span class="pos">+0.5%</span></td>
-  <td><span class="pos">+3.56pp</span></td>
-  <td><span class="pos">3.6</span></td>
-  <td><span class="pos">⚡43% (3)</span></td>
+  <td class="ticker">CMCSA</td>
+  <td class="score">56.8</td>
+  <td><span class="pos">+2.2%</span></td>
+  <td><span class="pos">+1.50pp</span></td>
+  <td><span class="pos">7.7</span></td>
+  <td><span class="pos">⚡88% (8)</span></td>
   <td class="contracts">
     
-      2028-01-21 / Strike $90 / OI 84,244 / IV 44% / Vol 47<br>
+      2027-01-15 / Strike $30 / OI 78,191 / IV 39% / Vol 509<br>
     
-      2028-01-21 / Strike $95 / OI 77,734 / IV 45% / Vol 134<br>
+      2027-01-15 / Strike $50 / OI 44,672 / IV 49% / Vol 2<br>
     
-      2028-01-21 / Strike $70 / OI 61,961 / IV 43% / Vol 3,906<br>
+      2028-01-21 / Strike $35 / OI 38,203 / IV 42% / Vol 267<br>
     
-      2028-01-21 / Strike $75 / OI 57,261 / IV 44% / Vol 3,386<br>
+      2027-01-15 / Strike $35 / OI 12,559 / IV 39% / Vol 25<br>
     
-      2027-01-15 / Strike $100 / OI 44,240 / IV 53% / Vol 12<br>
+      2027-01-15 / Strike $42 / OI 11,366 / IV 44% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">ASTS</td>
+  <td class="score">48.2</td>
+  <td><span class="pos">+0.2%</span></td>
+  <td><span class="pos">+8.39pp</span></td>
+  <td><span class="neutral">2.9</span></td>
+  <td><span class="">15% (3)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $100 / OI 16,240 / IV 117% / Vol 589<br>
+    
+      2027-01-15 / Strike $90 / OI 12,798 / IV 118% / Vol 178<br>
+    
+      2027-01-15 / Strike $150 / OI 12,661 / IV 117% / Vol 475<br>
+    
+      2027-01-15 / Strike $180 / OI 11,568 / IV 118% / Vol 387<br>
+    
+      2028-01-21 / Strike $180 / OI 11,209 / IV 106% / Vol 190<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Energy（1 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">APA</td>
+  <td class="score">67.0</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+5.84pp</span></td>
+  <td><span class="pos">11.9</span></td>
+  <td><span class="pos">⚡71% (1)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $20 / OI 20,868 / IV 76% / Vol 1<br>
+    
+      2027-01-15 / Strike $30 / OI 12,056 / IV 55% / Vol 5<br>
+    
+      2027-01-15 / Strike $22 / OI 6,198 / IV 68% / Vol 8<br>
+    
+      2027-01-15 / Strike $38 / OI 5,179 / IV 55% / Vol 2<br>
+    
+      2027-01-15 / Strike $40 / OI 3,241 / IV 52% / Vol 71<br>
     
   </td>
 </tr>
@@ -1408,7 +1418,7 @@
 </ul>
 </div>
 
-<p class="footer">数据交易日：2026-06-05 · 生成时间：2026-06-07 21:44:51 · LEAPS 选股系统 v0.1.0</p>
+<p class="footer">数据交易日：2026-06-05 · 生成时间：2026-06-08 09:12:20 · LEAPS 选股系统 v0.1.0</p>
 
 </body>
 </html>
