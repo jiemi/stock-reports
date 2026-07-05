@@ -43,7 +43,7 @@
   <li><b>进入评分</b>：615（过滤掉 OI &lt; 1000 的低流动性标的）</li>
   <li><b>Top N</b>：20</li>
   <li><b>数据交易日</b>：<code>2026-07-02</code></li>
-  <li><b>报告生成时间</b>：<code>2026-07-04 09:08:48</code></li>
+  <li><b>报告生成时间</b>：<code>2026-07-06 01:25:41</code></li>
   <li><b>数据模式</b>：<code>完整模式 (36 天历史)</code></li>
 </ul>
 
@@ -70,141 +70,111 @@
   <td>1</td>
   <td class="ticker">TSLA</td>
   <td><span class="grade">A</span> 强信号</td>
-  <td class="score">76.0</td>
+  <td class="score">77.0</td>
   <td>79.7</td>
   <td>46.2</td>
-  <td>call_oi_increase 93,126 为全样本最大，put_oi_increase 仅 2,984，新增 C/P 偏度 31.2 明确单边；Block 10 个合约、96% 份额显示非散户；expiry_count=6、top_expiry_share 0.42 扩散健康，非单一事件；Vol/OI 0.033 温和不像滚动流量。</td>
-  <td>leaps_call_oi_delta_pct 仅 +6.7%（大存量摊薄）、OI z-score 近 0，远期 IV 下行 -5.41pp，若为备兑/卖 Put 对冲的 Call 建仓则方向性打折，需后续快照确认增量延续。</td>
+  <td>绝对新增 Call OI 93,126 张为全场最大;C/P 新增偏度 31.2 明确单边看涨,Put 仅增 2,984(占比极低);6 个到期日共振、top_expiry_share 仅 0.42 扩散良好;10 个 Block 合约、Block OI 占比 96%,非散户特征明显。</td>
+  <td>环比仅 +6.7%、z-score 0.03 因存量基数 145 万张过大,增量相对占比被稀释;远期 IV 下行 -5.41pp 未与 OI 增量互证,方向性建仓中夹杂波动率卖方成分需留意。</td>
 </tr>
 <tr>
   <td>2</td>
+  <td class="ticker">LW</td>
+  <td><span class="grade">A</span> 可跟踪</td>
+  <td class="score">74.0</td>
+  <td>85.3</td>
+  <td>50.5</td>
+  <td>Call OI 净增 5,824 张、环比 +60%、z-score 5.0 均为极端值;Put 仅增 18、偏度 50 完全单边;单一 Block 占 OI 99%,明确为一笔大额机构指令。</td>
+  <td>expiry_count=1、top_expiry_share=1.0,全部押在单一到期日,事件交易概率高,缺乏远期共振;IV 下行 -2.02pp;整笔仓位依赖单一对手方,一旦是备兑/对冲腿则方向性存疑,故压在 75 强信号线之下。</td>
+</tr>
+<tr>
+  <td>3</td>
   <td class="ticker">NKE</td>
   <td><span class="grade">A</span> 可跟踪</td>
   <td class="score">71.0</td>
   <td>77.5</td>
   <td>40.2</td>
-  <td>call_oi_increase 18,508、Block 13 合约 81% 份额且分散在 5 个到期日（top 0.57），Vol/OI 0.032 干净；C/P 偏度 10.7 偏看涨。</td>
-  <td>delta_pct 仅 +3.9%、z-score 为负，put_oi_increase 1,722 使方向不纯，远期 IV 下行 -4.71pp，建仓强度中等。</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td class="ticker">LW</td>
-  <td><span class="grade">A</span> 可跟踪</td>
-  <td class="score">70.0</td>
-  <td>85.3</td>
-  <td>50.5</td>
-  <td>call_oi_increase 5,824、delta_pct +60%、put_oi_increase 仅 18、偏度 50，OI z-score 5.0 异常显著，强烈的单边新增建仓特征。</td>
-  <td>expiry_count=1、top_expiry_share 1.0、Block 单合约占 99%，高度集中更像一笔事件/结构化交易；远期 IV 下行 -2.02pp 不予印证，扩散度不足是主要扣分项。</td>
+  <td>Call OI 净增 18,508 张、13 个 Block 合约、Block 占比 81%,机构手笔明显;5 个到期日、top_expiry_share 0.573 扩散尚可;偏度 10.7 单边为主。</td>
+  <td>环比仅 +3.9%、z-score 为负(-0.10)显示相对存量并不突出;Put 同步增 1,722 削弱单边纯度;IV 下行 -4.71pp 无互证。</td>
 </tr>
 <tr>
   <td>4</td>
   <td class="ticker">META</td>
   <td><span class="grade">A</span> 可跟踪</td>
-  <td class="score">67.0</td>
+  <td class="score">69.0</td>
   <td>75.3</td>
   <td>47.2</td>
-  <td>expiry_count=6、top_expiry_share 0.35 扩散最健康，Block 12 合约 70%；leaps_iv_delta +0.42pp 与 OI 增量互相印证；Vol/OI 0.031 正常。</td>
-  <td>delta_pct 仅 +1.0%、偏度 5.6 偏低，put_oi_increase 3,207 使单边性弱，可能含组合/滚动成分。</td>
+  <td>Call OI 净增 17,892 张;6 个到期日、top_expiry_share 仅 0.346 为全场最分散;IV 上扬 +0.42pp 与 OI 增量温和互证;12 个 Block。</td>
+  <td>偏度仅 5.58 且 Put 同步增 3,207,单边纯度不足,更像组合/滚动布局;环比 +1.0% 在百万级存量上占比微弱。</td>
 </tr>
 <tr>
   <td>5</td>
   <td class="ticker">VEEV</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">64.0</td>
+  <td class="score">65.0</td>
   <td>71.0</td>
   <td>48.0</td>
-  <td>delta_pct +23.8%、z-score 1.2、put_oi_increase 24、偏度 50，单边特征清晰；Block 2 合约 53%。</td>
-  <td>绝对新增仅 2,218 张、Vol/OI 0.153 偏高含短线流量，expiry_count=2 且远期 IV 下行 -1.78pp，规模与流动性偏弱。</td>
+  <td>环比 +23.8%、z-score 1.19、Put 仅增 24、偏度 50 完全单边;2 个到期日、2 个 Block 占比 53%。</td>
+  <td>绝对新增仅 2,218 张体量小;IV 下行 -1.78pp;vol/oi 0.15 偏高,含一定短线流量;到期日仅 2 个共振有限。</td>
 </tr>
 <tr>
   <td>6</td>
-  <td class="ticker">EL</td>
+  <td class="ticker">AMT</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">63.0</td>
-  <td>65.2</td>
-  <td>41.5</td>
-  <td>delta_pct +14.4%、put_oi_increase 4、偏度 50，单边看涨证据强；Block 66% 份额。</td>
-  <td>expiry_count=1、top_expiry_share 1.0 高度集中，事件交易概率高；远期 IV 下行 -1.04pp 未印证。</td>
+  <td class="score">62.0</td>
+  <td>70.5</td>
+  <td>48.5</td>
+  <td>环比 +12.7%、z-score 2.15、偏度 9.35 单边;IV 上扬 +1.46pp 与新增 OI 互证;单一 Block 占比 98%。</td>
+  <td>expiry_count=1、top_expiry_share=1.0 高度集中,事件交易概率高;Put 增 182 有轻微同步;绝对新增 1,701 张体量小。</td>
 </tr>
 <tr>
   <td>7</td>
-  <td class="ticker">VFC</td>
-  <td><span class="grade">C</span> 可跟踪</td>
-  <td class="score">62.0</td>
-  <td>56.1</td>
-  <td>49.2</td>
-  <td>block_oi_share 0.995、put_oi_increase 33、偏度 50，leaps_iv_delta +0.77pp 温和上行印证；Vol/OI 0.006 极低说明非短线换手，属低调建仓。</td>
-  <td>delta_pct 仅 +1.4%、绝对新增 1,973 张不大，z-score 0.68，建仓量级有限需持续观察。</td>
+  <td class="ticker">ALGN</td>
+  <td><span class="grade">B</span> 可跟踪</td>
+  <td class="score">61.0</td>
+  <td>67.6</td>
+  <td>49.0</td>
+  <td>环比 +47%、偏度 39、Put 仅增 58,单边纯度高;单一 Block 占比 99% 为大额指令。</td>
+  <td>expiry_count=1、top_expiry_share=1.0,z-score 仅 0.56,缺远期共振,事件交易概率高;绝对新增 2,262 张偏小。</td>
 </tr>
 <tr>
   <td>8</td>
-  <td class="ticker">FMC</td>
+  <td class="ticker">APTV</td>
   <td><span class="grade">B</span> 可跟踪</td>
   <td class="score">61.0</td>
-  <td>61.5</td>
-  <td>54.2</td>
-  <td>leaps_iv_delta +2.1pp 与新增 OI 同向印证，Block 4 合约 83%，Vol/OI 0.015 极低非流量。</td>
-  <td>call_oi_increase 仅 1,827、delta_pct +4.5%，偏度 11.8 中性偏多，IV 均值 0.88 偏高，规模有限。</td>
+  <td>66.7</td>
+  <td>45.2</td>
+  <td>环比 +8.2%、z-score 1.5、Put 仅增 6、偏度 50 完全单边;2 个到期日、Block 占比 76%。</td>
+  <td>绝对新增仅 938 张体量很小;IV 下行 -2.07pp;top_expiry_share 0.77 仍偏集中。</td>
 </tr>
 <tr>
   <td>9</td>
-  <td class="ticker">AMT</td>
-  <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">61.0</td>
-  <td>70.5</td>
-  <td>48.5</td>
-  <td>delta_pct +12.7%、z-score 2.1、leaps_iv_delta +1.46pp 与 OI 同向，Put 增量相对可控。</td>
-  <td>expiry_count=1、top_expiry_share 1.0、单合约 Block 98%，集中度高偏事件；偏度 9.3 温和。</td>
+  <td class="ticker">CMCSA</td>
+  <td><span class="grade">C</span> 可跟踪</td>
+  <td class="score">60.0</td>
+  <td>55.0</td>
+  <td>50.9</td>
+  <td>绝对新增 6,810 张、偏度 31 单边、Put 仅增 220;4 个到期日、3 个 Block 占比 86%;vol/oi 0.012 极低非短线。</td>
+  <td>环比仅 +2.0%;top_expiry_share 0.78 偏集中;IV 下行 -1.08pp 无互证。</td>
 </tr>
 <tr>
   <td>10</td>
-  <td class="ticker">WMT</td>
+  <td class="ticker">SMCI</td>
   <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">61.0</td>
-  <td>68.8</td>
-  <td>46.2</td>
-  <td>block_contracts 14、71% 份额，call_oi_increase 6,958，Vol/OI 0.037 正常，属分散建仓。</td>
-  <td>delta_pct +2.9%、偏度 3.4、put_oi_increase 2,040 几乎同步，远期 IV 下行 -1.50pp，单边性弱。</td>
+  <td class="score">60.0</td>
+  <td>65.9</td>
+  <td>44.8</td>
+  <td>绝对新增 6,679 张;6 个到期日、top 0.56 扩散良好;IV 上扬 +3.90pp 与 OI 互证;9 个 Block;vol/oi 0.023 低,非短线流量。</td>
+  <td>偏度仅 4.35、Put 同步增 1,537,单边纯度不足;环比 +1.5%、z-score ~0 相对存量不突出;IV 基数极高(0.94)含事件溢价。</td>
 </tr>
 <tr>
   <td>11</td>
-  <td class="ticker">SMCI</td>
-  <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">61.0</td>
-  <td>65.9</td>
-  <td>44.8</td>
-  <td>expiry_count=6、top 0.56 扩散良好，Block 9 合约；leaps_iv_delta +0.039 印证 OI 增量。</td>
-  <td>delta_pct 仅 +1.5%、z-score 近 0，put_oi_increase 1,537、偏度 4.3 方向不纯，且 IV 均值 0.94 极高环境噪音大。</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td class="ticker">ALGN</td>
+  <td class="ticker">EL</td>
   <td><span class="grade">B</span> 可跟踪</td>
   <td class="score">60.0</td>
-  <td>67.6</td>
-  <td>49.0</td>
-  <td>delta_pct +47%、put_oi_increase 58、偏度 39，单边看涨显著。</td>
-  <td>expiry_count=1、top 1.0、单合约 Block 99%，事件交易概率高；绝对新增仅 2,262 张，IV 基本走平未印证。</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td class="ticker">APTV</td>
-  <td><span class="grade">B</span> 可跟踪</td>
-  <td class="score">60.0</td>
-  <td>66.7</td>
-  <td>45.2</td>
-  <td>put_oi_increase 6、偏度 50、delta_pct +8.2%、z-score 1.5，单边特征清晰；Block 2 合约 76%。</td>
-  <td>call_oi_increase 仅 938、expiry_count=2、远期 IV 下行 -2.07pp，量级偏小需补强。</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td class="ticker">TTD</td>
-  <td><span class="grade">C</span> 可跟踪</td>
-  <td class="score">60.0</td>
-  <td>59.7</td>
-  <td>41.1</td>
-  <td>call_oi_increase 11,775、put_oi_increase 389、偏度 30.3 单边，Block 7 合约 92% 份额。</td>
-  <td>top_expiry_share 0.92 过度集中偏事件，delta_pct +3.8%、远期 IV 下行 -1.13pp，IV 均值 0.82 环境噪音大。</td>
+  <td>65.2</td>
+  <td>41.5</td>
+  <td>环比 +14.4%、Put 仅增 4、偏度 50,单边纯度极高;绝对新增 7,554 张规模不俗。</td>
+  <td>expiry_count=1、top_expiry_share=1.0 且仅 1 个 Block,事件交易概率高;IV 下行 -1.04pp;z-score 0.91 相对存量未突出。</td>
 </tr>
 
 </tbody>
@@ -219,7 +189,7 @@
   <td>1</td>
   <td class="ticker">TSLA</td>
   <td>Consumer Discretionary</td>
-  <td class="score">76.0</td>
+  <td class="score">77.0</td>
   <td>79.7</td>
   <td class="score">46.2</td>
   <td><span class="pos">+6.7%</span></td>
@@ -232,6 +202,21 @@
 </tr>
 <tr>
   <td>2</td>
+  <td class="ticker">LW</td>
+  <td>Consumer Staples</td>
+  <td class="score">74.0</td>
+  <td>85.3</td>
+  <td class="score">50.5</td>
+  <td><span class="pos">+60.0%</span></td>
+  <td><span class="neg">-2.02pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡99% (1)</span></td>
+  <td>1</td>
+  <td><span class="">0.06</span></td>
+  <td>15,529</td>
+</tr>
+<tr>
+  <td>3</td>
   <td class="ticker">NKE</td>
   <td>Consumer Discretionary</td>
   <td class="score">71.0</td>
@@ -246,25 +231,10 @@
   <td>443,840</td>
 </tr>
 <tr>
-  <td>3</td>
-  <td class="ticker">LW</td>
-  <td>Consumer Staples</td>
-  <td class="score">70.0</td>
-  <td>85.3</td>
-  <td class="score">50.5</td>
-  <td><span class="pos">+60.0%</span></td>
-  <td><span class="neg">-2.02pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡99% (1)</span></td>
-  <td>1</td>
-  <td><span class="">0.06</span></td>
-  <td>15,529</td>
-</tr>
-<tr>
   <td>4</td>
   <td class="ticker">META</td>
   <td>Technology</td>
-  <td class="score">67.0</td>
+  <td class="score">69.0</td>
   <td>75.3</td>
   <td class="score">47.2</td>
   <td><span class="pos">+1.0%</span></td>
@@ -279,7 +249,7 @@
   <td>5</td>
   <td class="ticker">VEEV</td>
   <td>Technology</td>
-  <td class="score">64.0</td>
+  <td class="score">65.0</td>
   <td>71.0</td>
   <td class="score">48.0</td>
   <td><span class="pos">+23.8%</span></td>
@@ -292,54 +262,9 @@
 </tr>
 <tr>
   <td>6</td>
-  <td class="ticker">EL</td>
-  <td>Consumer Staples</td>
-  <td class="score">63.0</td>
-  <td>65.2</td>
-  <td class="score">41.5</td>
-  <td><span class="pos">+14.4%</span></td>
-  <td><span class="neg">-1.04pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡66% (1)</span></td>
-  <td>1</td>
-  <td><span class="">0.05</span></td>
-  <td>59,908</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td class="ticker">VFC</td>
-  <td>Consumer Discretionary</td>
-  <td class="score">62.0</td>
-  <td>56.1</td>
-  <td class="score">49.2</td>
-  <td><span class="pos">+1.4%</span></td>
-  <td><span class="pos">+0.77pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡100% (3)</span></td>
-  <td>2</td>
-  <td><span class="">0.01</span></td>
-  <td>142,354</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td class="ticker">FMC</td>
-  <td>Materials</td>
-  <td class="score">61.0</td>
-  <td>61.5</td>
-  <td class="score">54.2</td>
-  <td><span class="pos">+4.5%</span></td>
-  <td><span class="pos">+2.10pp</span></td>
-  <td><span class="pos">11.8</span></td>
-  <td><span class="pos">⚡83% (4)</span></td>
-  <td>2</td>
-  <td><span class="">0.02</span></td>
-  <td>42,126</td>
-</tr>
-<tr>
-  <td>9</td>
   <td class="ticker">AMT</td>
   <td>Real Estate</td>
-  <td class="score">61.0</td>
+  <td class="score">62.0</td>
   <td>70.5</td>
   <td class="score">48.5</td>
   <td><span class="pos">+12.7%</span></td>
@@ -351,40 +276,10 @@
   <td>15,085</td>
 </tr>
 <tr>
-  <td>10</td>
-  <td class="ticker">WMT</td>
-  <td>Consumer Discretionary</td>
-  <td class="score">61.0</td>
-  <td>68.8</td>
-  <td class="score">46.2</td>
-  <td><span class="pos">+2.9%</span></td>
-  <td><span class="neg">-1.50pp</span></td>
-  <td><span class="pos">3.4</span></td>
-  <td><span class="pos">⚡71% (14)</span></td>
-  <td>3</td>
-  <td><span class="">0.04</span></td>
-  <td>177,980</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td class="ticker">SMCI</td>
-  <td>Technology</td>
-  <td class="score">61.0</td>
-  <td>65.9</td>
-  <td class="score">44.8</td>
-  <td><span class="pos">+1.5%</span></td>
-  <td><span class="pos">+3.90pp</span></td>
-  <td><span class="pos">4.3</span></td>
-  <td><span class="pos">⚡56% (9)</span></td>
-  <td>6</td>
-  <td><span class="">0.02</span></td>
-  <td>424,888</td>
-</tr>
-<tr>
-  <td>12</td>
+  <td>7</td>
   <td class="ticker">ALGN</td>
   <td>Healthcare</td>
-  <td class="score">60.0</td>
+  <td class="score">61.0</td>
   <td>67.6</td>
   <td class="score">49.0</td>
   <td><span class="pos">+47.0%</span></td>
@@ -396,10 +291,10 @@
   <td>7,075</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>8</td>
   <td class="ticker">APTV</td>
   <td>Consumer Discretionary</td>
-  <td class="score">60.0</td>
+  <td class="score">61.0</td>
   <td>66.7</td>
   <td class="score">45.2</td>
   <td><span class="pos">+8.2%</span></td>
@@ -411,25 +306,10 @@
   <td>12,424</td>
 </tr>
 <tr>
-  <td>14</td>
-  <td class="ticker">TTD</td>
-  <td>Technology</td>
-  <td class="score">60.0</td>
-  <td>59.7</td>
-  <td class="score">41.1</td>
-  <td><span class="pos">+3.8%</span></td>
-  <td><span class="neg">-1.13pp</span></td>
-  <td><span class="pos">30.3</span></td>
-  <td><span class="pos">⚡92% (7)</span></td>
-  <td>3</td>
-  <td><span class="">0.03</span></td>
-  <td>298,791</td>
-</tr>
-<tr>
-  <td>15</td>
+  <td>9</td>
   <td class="ticker">CMCSA</td>
   <td>Communication Services</td>
-  <td class="score">59.0</td>
+  <td class="score">60.0</td>
   <td>55.0</td>
   <td class="score">50.9</td>
   <td><span class="pos">+2.0%</span></td>
@@ -441,25 +321,85 @@
   <td>316,788</td>
 </tr>
 <tr>
-  <td>16</td>
-  <td class="ticker">SYY</td>
-  <td>Consumer Discretionary</td>
-  <td class="score">59.0</td>
-  <td>61.8</td>
-  <td class="score">38.5</td>
-  <td><span class="pos">+19.5%</span></td>
-  <td><span class="neg">-2.26pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡98% (1)</span></td>
-  <td>1</td>
-  <td><span class="">0.08</span></td>
-  <td>8,639</td>
+  <td>10</td>
+  <td class="ticker">SMCI</td>
+  <td>Technology</td>
+  <td class="score">60.0</td>
+  <td>65.9</td>
+  <td class="score">44.8</td>
+  <td><span class="pos">+1.5%</span></td>
+  <td><span class="pos">+3.90pp</span></td>
+  <td><span class="pos">4.3</span></td>
+  <td><span class="pos">⚡56% (9)</span></td>
+  <td>6</td>
+  <td><span class="">0.02</span></td>
+  <td>424,888</td>
 </tr>
 <tr>
-  <td>17</td>
-  <td class="ticker">TSCO</td>
+  <td>11</td>
+  <td class="ticker">EL</td>
+  <td>Consumer Staples</td>
+  <td class="score">60.0</td>
+  <td>65.2</td>
+  <td class="score">41.5</td>
+  <td><span class="pos">+14.4%</span></td>
+  <td><span class="neg">-1.04pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡66% (1)</span></td>
+  <td>1</td>
+  <td><span class="">0.05</span></td>
+  <td>59,908</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td class="ticker">WMT</td>
   <td>Consumer Discretionary</td>
   <td class="score">58.0</td>
+  <td>68.8</td>
+  <td class="score">46.2</td>
+  <td><span class="pos">+2.9%</span></td>
+  <td><span class="neg">-1.50pp</span></td>
+  <td><span class="pos">3.4</span></td>
+  <td><span class="pos">⚡71% (14)</span></td>
+  <td>3</td>
+  <td><span class="">0.04</span></td>
+  <td>177,980</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td class="ticker">TTD</td>
+  <td>Technology</td>
+  <td class="score">58.0</td>
+  <td>59.7</td>
+  <td class="score">41.1</td>
+  <td><span class="pos">+3.8%</span></td>
+  <td><span class="neg">-1.13pp</span></td>
+  <td><span class="pos">30.3</span></td>
+  <td><span class="pos">⚡92% (7)</span></td>
+  <td>3</td>
+  <td><span class="">0.03</span></td>
+  <td>298,791</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td class="ticker">VFC</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">57.0</td>
+  <td>56.1</td>
+  <td class="score">49.2</td>
+  <td><span class="pos">+1.4%</span></td>
+  <td><span class="pos">+0.77pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡100% (3)</span></td>
+  <td>2</td>
+  <td><span class="">0.01</span></td>
+  <td>142,354</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td class="ticker">TSCO</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">56.0</td>
   <td>64.3</td>
   <td class="score">45.2</td>
   <td><span class="pos">+3.3%</span></td>
@@ -471,10 +411,25 @@
   <td>52,503</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>16</td>
+  <td class="ticker">FMC</td>
+  <td>Materials</td>
+  <td class="score">55.0</td>
+  <td>61.5</td>
+  <td class="score">54.2</td>
+  <td><span class="pos">+4.5%</span></td>
+  <td><span class="pos">+2.10pp</span></td>
+  <td><span class="pos">11.8</span></td>
+  <td><span class="pos">⚡83% (4)</span></td>
+  <td>2</td>
+  <td><span class="">0.02</span></td>
+  <td>42,126</td>
+</tr>
+<tr>
+  <td>17</td>
   <td class="ticker">JPM</td>
   <td>Financials</td>
-  <td class="score">57.0</td>
+  <td class="score">55.0</td>
   <td>62.9</td>
   <td class="score">48.5</td>
   <td><span class="pos">+2.3%</span></td>
@@ -486,25 +441,10 @@
   <td>114,324</td>
 </tr>
 <tr>
-  <td>19</td>
-  <td class="ticker">PLTR</td>
-  <td>Technology</td>
-  <td class="score">57.0</td>
-  <td>60.6</td>
-  <td class="score">41.8</td>
-  <td><span class="pos">+0.7%</span></td>
-  <td><span class="neg">-0.72pp</span></td>
-  <td><span class="pos">3.2</span></td>
-  <td><span class="pos">⚡72% (10)</span></td>
-  <td>5</td>
-  <td><span class="">0.03</span></td>
-  <td>705,983</td>
-</tr>
-<tr>
-  <td>20</td>
+  <td>18</td>
   <td class="ticker">LVS</td>
   <td>Consumer Discretionary</td>
-  <td class="score">57.0</td>
+  <td class="score">55.0</td>
   <td>62.4</td>
   <td class="score">40.2</td>
   <td><span class="pos">+5.8%</span></td>
@@ -514,6 +454,36 @@
   <td>2</td>
   <td><span class="">0.04</span></td>
   <td>20,590</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td class="ticker">SYY</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">55.0</td>
+  <td>61.8</td>
+  <td class="score">38.5</td>
+  <td><span class="pos">+19.5%</span></td>
+  <td><span class="neg">-2.26pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡98% (1)</span></td>
+  <td>1</td>
+  <td><span class="">0.08</span></td>
+  <td>8,639</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td class="ticker">T</td>
+  <td>Communication Services</td>
+  <td class="score">54.0</td>
+  <td>70.1</td>
+  <td class="score">58.2</td>
+  <td><span class="pos">+3.8%</span></td>
+  <td><span class="pos">+4.37pp</span></td>
+  <td><span class="pos">4.1</span></td>
+  <td><span class="">25% (3)</span></td>
+  <td>4</td>
+  <td><span class="">0.18</span></td>
+  <td>229,239</td>
 </tr>
 
 </tbody>
@@ -543,16 +513,6 @@
   <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">NKE</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.10 → <b>2.0</b></td>
-  <td>0.05 → <b>1.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
   <td class="ticker">LW</td>
   <td>0.50 → <b>7.5</b></td>
   <td>1.00 → <b>20.0</b></td>
@@ -561,6 +521,16 @@
   <td>1.00 → <b>10.0</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>0.12 → <b>1.2</b></td>
+</tr>
+<tr>
+  <td class="ticker">NKE</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.10 → <b>2.0</b></td>
+  <td>0.05 → <b>1.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
   <td class="ticker">META</td>
@@ -583,36 +553,6 @@
   <td>0.50 → <b>5.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">EL</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.20 → <b>4.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.12 → <b>1.2</b></td>
-</tr>
-<tr>
-  <td class="ticker">VFC</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.50 → <b>5.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">FMC</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.65 → <b>13.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.50 → <b>5.0</b></td>
-</tr>
-<tr>
   <td class="ticker">AMT</td>
   <td>0.20 → <b>3.0</b></td>
   <td>0.85 → <b>17.0</b></td>
@@ -621,26 +561,6 @@
   <td>1.00 → <b>10.0</b></td>
   <td>0.85 → <b>8.5</b></td>
   <td>0.12 → <b>1.2</b></td>
-</tr>
-<tr>
-  <td class="ticker">WMT</td>
-  <td>0.50 → <b>7.5</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.20 → <b>4.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
-  <td class="ticker">SMCI</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.10 → <b>2.0</b></td>
-  <td>0.65 → <b>13.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
 </tr>
 <tr>
   <td class="ticker">ALGN</td>
@@ -663,16 +583,6 @@
   <td>0.30 → <b>3.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">TTD</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.20 → <b>4.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.54 → <b>5.4</b></td>
-</tr>
-<tr>
   <td class="ticker">CMCSA</td>
   <td>0.85 → <b>12.8</b></td>
   <td>0.40 → <b>8.0</b></td>
@@ -683,14 +593,54 @@
   <td>0.54 → <b>5.4</b></td>
 </tr>
 <tr>
-  <td class="ticker">SYY</td>
+  <td class="ticker">SMCI</td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.10 → <b>2.0</b></td>
+  <td>0.65 → <b>13.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.70 → <b>7.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">EL</td>
   <td>0.50 → <b>7.5</b></td>
   <td>0.40 → <b>8.0</b></td>
-  <td>0.05 → <b>1.0</b></td>
+  <td>0.20 → <b>4.0</b></td>
   <td>0.05 → <b>0.8</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>0.12 → <b>1.2</b></td>
+</tr>
+<tr>
+  <td class="ticker">WMT</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.20 → <b>4.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.70 → <b>7.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">TTD</td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.20 → <b>4.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.54 → <b>5.4</b></td>
+</tr>
+<tr>
+  <td class="ticker">VFC</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.50 → <b>5.0</b></td>
 </tr>
 <tr>
   <td class="ticker">TSCO</td>
@@ -703,6 +653,16 @@
   <td>0.30 → <b>3.0</b></td>
 </tr>
 <tr>
+  <td class="ticker">FMC</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.65 → <b>13.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.50 → <b>5.0</b></td>
+</tr>
+<tr>
   <td class="ticker">JPM</td>
   <td>0.85 → <b>12.8</b></td>
   <td>0.40 → <b>8.0</b></td>
@@ -713,16 +673,6 @@
   <td>0.30 → <b>3.0</b></td>
 </tr>
 <tr>
-  <td class="ticker">PLTR</td>
-  <td>0.20 → <b>3.0</b></td>
-  <td>0.40 → <b>8.0</b></td>
-  <td>0.20 → <b>4.0</b></td>
-  <td>0.05 → <b>0.8</b></td>
-  <td>1.00 → <b>10.0</b></td>
-  <td>0.70 → <b>7.0</b></td>
-  <td>0.90 → <b>9.0</b></td>
-</tr>
-<tr>
   <td class="ticker">LVS</td>
   <td>0.50 → <b>7.5</b></td>
   <td>0.40 → <b>8.0</b></td>
@@ -731,6 +681,26 @@
   <td>1.00 → <b>10.0</b></td>
   <td>1.00 → <b>10.0</b></td>
   <td>0.30 → <b>3.0</b></td>
+</tr>
+<tr>
+  <td class="ticker">SYY</td>
+  <td>0.50 → <b>7.5</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.05 → <b>1.0</b></td>
+  <td>0.05 → <b>0.8</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>1.00 → <b>10.0</b></td>
+  <td>0.12 → <b>1.2</b></td>
+</tr>
+<tr>
+  <td class="ticker">T</td>
+  <td>0.85 → <b>12.8</b></td>
+  <td>0.40 → <b>8.0</b></td>
+  <td>0.65 → <b>13.0</b></td>
+  <td>0.20 → <b>3.0</b></td>
+  <td>0.55 → <b>5.5</b></td>
+  <td>0.70 → <b>7.0</b></td>
+  <td>0.90 → <b>9.0</b></td>
 </tr>
 
 </tbody>
@@ -751,16 +721,6 @@
   <td>42%</td>
 </tr>
 <tr>
-  <td class="ticker">NKE</td>
-  <td>18,508</td>
-  <td>1,722</td>
-  <td>10.7</td>
-  <td>13</td>
-  <td>81%</td>
-  <td>5</td>
-  <td>57%</td>
-</tr>
-<tr>
   <td class="ticker">LW</td>
   <td>5,824</td>
   <td>18</td>
@@ -769,6 +729,16 @@
   <td>99%</td>
   <td>1</td>
   <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">NKE</td>
+  <td>18,508</td>
+  <td>1,722</td>
+  <td>10.7</td>
+  <td>13</td>
+  <td>81%</td>
+  <td>5</td>
+  <td>57%</td>
 </tr>
 <tr>
   <td class="ticker">META</td>
@@ -791,36 +761,6 @@
   <td>54%</td>
 </tr>
 <tr>
-  <td class="ticker">EL</td>
-  <td>7,554</td>
-  <td>4</td>
-  <td>50.0</td>
-  <td>1</td>
-  <td>66%</td>
-  <td>1</td>
-  <td>100%</td>
-</tr>
-<tr>
-  <td class="ticker">VFC</td>
-  <td>1,973</td>
-  <td>33</td>
-  <td>50.0</td>
-  <td>3</td>
-  <td>100%</td>
-  <td>2</td>
-  <td>51%</td>
-</tr>
-<tr>
-  <td class="ticker">FMC</td>
-  <td>1,827</td>
-  <td>155</td>
-  <td>11.8</td>
-  <td>4</td>
-  <td>83%</td>
-  <td>2</td>
-  <td>68%</td>
-</tr>
-<tr>
   <td class="ticker">AMT</td>
   <td>1,701</td>
   <td>182</td>
@@ -829,26 +769,6 @@
   <td>98%</td>
   <td>1</td>
   <td>100%</td>
-</tr>
-<tr>
-  <td class="ticker">WMT</td>
-  <td>6,958</td>
-  <td>2,040</td>
-  <td>3.4</td>
-  <td>14</td>
-  <td>71%</td>
-  <td>3</td>
-  <td>50%</td>
-</tr>
-<tr>
-  <td class="ticker">SMCI</td>
-  <td>6,679</td>
-  <td>1,537</td>
-  <td>4.3</td>
-  <td>9</td>
-  <td>56%</td>
-  <td>6</td>
-  <td>56%</td>
 </tr>
 <tr>
   <td class="ticker">ALGN</td>
@@ -871,16 +791,6 @@
   <td>77%</td>
 </tr>
 <tr>
-  <td class="ticker">TTD</td>
-  <td>11,775</td>
-  <td>389</td>
-  <td>30.3</td>
-  <td>7</td>
-  <td>92%</td>
-  <td>3</td>
-  <td>92%</td>
-</tr>
-<tr>
   <td class="ticker">CMCSA</td>
   <td>6,810</td>
   <td>220</td>
@@ -891,14 +801,54 @@
   <td>78%</td>
 </tr>
 <tr>
-  <td class="ticker">SYY</td>
-  <td>1,419</td>
-  <td>0</td>
+  <td class="ticker">SMCI</td>
+  <td>6,679</td>
+  <td>1,537</td>
+  <td>4.3</td>
+  <td>9</td>
+  <td>56%</td>
+  <td>6</td>
+  <td>56%</td>
+</tr>
+<tr>
+  <td class="ticker">EL</td>
+  <td>7,554</td>
+  <td>4</td>
   <td>50.0</td>
   <td>1</td>
-  <td>98%</td>
+  <td>66%</td>
   <td>1</td>
   <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">WMT</td>
+  <td>6,958</td>
+  <td>2,040</td>
+  <td>3.4</td>
+  <td>14</td>
+  <td>71%</td>
+  <td>3</td>
+  <td>50%</td>
+</tr>
+<tr>
+  <td class="ticker">TTD</td>
+  <td>11,775</td>
+  <td>389</td>
+  <td>30.3</td>
+  <td>7</td>
+  <td>92%</td>
+  <td>3</td>
+  <td>92%</td>
+</tr>
+<tr>
+  <td class="ticker">VFC</td>
+  <td>1,973</td>
+  <td>33</td>
+  <td>50.0</td>
+  <td>3</td>
+  <td>100%</td>
+  <td>2</td>
+  <td>51%</td>
 </tr>
 <tr>
   <td class="ticker">TSCO</td>
@@ -911,6 +861,16 @@
   <td>80%</td>
 </tr>
 <tr>
+  <td class="ticker">FMC</td>
+  <td>1,827</td>
+  <td>155</td>
+  <td>11.8</td>
+  <td>4</td>
+  <td>83%</td>
+  <td>2</td>
+  <td>68%</td>
+</tr>
+<tr>
   <td class="ticker">JPM</td>
   <td>2,744</td>
   <td>261</td>
@@ -921,16 +881,6 @@
   <td>87%</td>
 </tr>
 <tr>
-  <td class="ticker">PLTR</td>
-  <td>7,987</td>
-  <td>2,527</td>
-  <td>3.2</td>
-  <td>10</td>
-  <td>72%</td>
-  <td>5</td>
-  <td>31%</td>
-</tr>
-<tr>
   <td class="ticker">LVS</td>
   <td>1,125</td>
   <td>17</td>
@@ -939,6 +889,26 @@
   <td>88%</td>
   <td>2</td>
   <td>91%</td>
+</tr>
+<tr>
+  <td class="ticker">SYY</td>
+  <td>1,419</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>1</td>
+  <td>98%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">T</td>
+  <td>8,747</td>
+  <td>2,157</td>
+  <td>4.1</td>
+  <td>3</td>
+  <td>25%</td>
+  <td>4</td>
+  <td>65%</td>
 </tr>
 
 </tbody>
@@ -992,23 +962,23 @@
   </td>
 </tr>
 <tr>
-  <td class="ticker">VFC</td>
-  <td class="score">49.2</td>
-  <td><span class="pos">+1.4%</span></td>
-  <td><span class="pos">+0.77pp</span></td>
+  <td class="ticker">APTV</td>
+  <td class="score">45.2</td>
+  <td><span class="pos">+8.2%</span></td>
+  <td><span class="neg">-2.07pp</span></td>
   <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡100% (3)</span></td>
+  <td><span class="pos">⚡76% (2)</span></td>
   <td class="contracts">
     
-      2027-01-15 / Strike $30 / OI 34,712 / IV 55% / Vol 1<br>
+      2027-01-15 / Strike $80 / OI 3,386 / IV 47% / Vol 9<br>
     
-      2027-01-15 / Strike $25 / OI 27,687 / IV 57% / Vol 9<br>
+      2027-01-15 / Strike $75 / OI 2,569 / IV 47% / Vol 2<br>
     
-      2028-01-21 / Strike $30 / OI 16,833 / IV 57% / Vol 6<br>
+      2027-01-15 / Strike $70 / OI 2,350 / IV 47% / Vol 51<br>
     
-      2028-01-21 / Strike $25 / OI 14,293 / IV 52% / Vol 6<br>
+      2027-01-15 / Strike $85 / OI 1,642 / IV 47% / Vol 1<br>
     
-      2027-01-15 / Strike $20 / OI 4,888 / IV 55% / Vol 147<br>
+      2027-02-19 / Strike $70 / OI 562 / IV 46% / Vol 200<br>
     
   </td>
 </tr>
@@ -1034,44 +1004,23 @@
   </td>
 </tr>
 <tr>
-  <td class="ticker">APTV</td>
-  <td class="score">45.2</td>
-  <td><span class="pos">+8.2%</span></td>
-  <td><span class="neg">-2.07pp</span></td>
+  <td class="ticker">VFC</td>
+  <td class="score">49.2</td>
+  <td><span class="pos">+1.4%</span></td>
+  <td><span class="pos">+0.77pp</span></td>
   <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡76% (2)</span></td>
+  <td><span class="pos">⚡100% (3)</span></td>
   <td class="contracts">
     
-      2027-01-15 / Strike $80 / OI 3,386 / IV 47% / Vol 9<br>
+      2027-01-15 / Strike $30 / OI 34,712 / IV 55% / Vol 1<br>
     
-      2027-01-15 / Strike $75 / OI 2,569 / IV 47% / Vol 2<br>
+      2027-01-15 / Strike $25 / OI 27,687 / IV 57% / Vol 9<br>
     
-      2027-01-15 / Strike $70 / OI 2,350 / IV 47% / Vol 51<br>
+      2028-01-21 / Strike $30 / OI 16,833 / IV 57% / Vol 6<br>
     
-      2027-01-15 / Strike $85 / OI 1,642 / IV 47% / Vol 1<br>
+      2028-01-21 / Strike $25 / OI 14,293 / IV 52% / Vol 6<br>
     
-      2027-02-19 / Strike $70 / OI 562 / IV 46% / Vol 200<br>
-    
-  </td>
-</tr>
-<tr>
-  <td class="ticker">SYY</td>
-  <td class="score">38.5</td>
-  <td><span class="pos">+19.5%</span></td>
-  <td><span class="neg">-2.26pp</span></td>
-  <td><span class="pos">50+</span></td>
-  <td><span class="pos">⚡98% (1)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $95 / OI 1,591 / IV 22% / Vol 303<br>
-    
-      2027-01-15 / Strike $90 / OI 977 / IV 24% / Vol 1<br>
-    
-      2027-03-19 / Strike $88 / OI 969 / IV 23% / Vol 10<br>
-    
-      2027-01-15 / Strike $88 / OI 780 / IV 24% / Vol 2<br>
-    
-      2027-01-15 / Strike $85 / OI 501 / IV 24% / Vol 3<br>
+      2027-01-15 / Strike $20 / OI 4,888 / IV 55% / Vol 147<br>
     
   </td>
 </tr>
@@ -1114,6 +1063,27 @@
       2028-01-21 / Strike $68 / OI 1,196 / IV 38% / Vol 1<br>
     
       2027-01-15 / Strike $42 / OI 1,015 / IV 41% / Vol 7<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">SYY</td>
+  <td class="score">38.5</td>
+  <td><span class="pos">+19.5%</span></td>
+  <td><span class="neg">-2.26pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="pos">⚡98% (1)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $95 / OI 1,591 / IV 22% / Vol 303<br>
+    
+      2027-01-15 / Strike $90 / OI 977 / IV 24% / Vol 1<br>
+    
+      2027-03-19 / Strike $88 / OI 969 / IV 23% / Vol 10<br>
+    
+      2027-01-15 / Strike $88 / OI 780 / IV 24% / Vol 2<br>
+    
+      2027-01-15 / Strike $85 / OI 501 / IV 24% / Vol 3<br>
     
   </td>
 </tr>
@@ -1169,7 +1139,7 @@
 
 </tbody>
 </table>
-<h3>Technology（5 只）</h3>
+<h3>Technology（4 只）</h3>
 <table>
 <thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
 <tbody>
@@ -1257,55 +1227,6 @@
     
   </td>
 </tr>
-<tr>
-  <td class="ticker">PLTR</td>
-  <td class="score">41.8</td>
-  <td><span class="pos">+0.7%</span></td>
-  <td><span class="neg">-0.72pp</span></td>
-  <td><span class="pos">3.2</span></td>
-  <td><span class="pos">⚡72% (10)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $200 / OI 18,945 / IV 58% / Vol 356<br>
-    
-      2027-01-15 / Strike $150 / OI 16,191 / IV 57% / Vol 1,023<br>
-    
-      2027-01-15 / Strike $210 / OI 14,238 / IV 59% / Vol 58<br>
-    
-      2027-01-15 / Strike $160 / OI 13,205 / IV 57% / Vol 263<br>
-    
-      2028-01-21 / Strike $200 / OI 12,248 / IV 59% / Vol 105<br>
-    
-  </td>
-</tr>
-
-</tbody>
-</table>
-<h3>Materials（1 只）</h3>
-<table>
-<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
-<tbody>
-<tr>
-  <td class="ticker">FMC</td>
-  <td class="score">54.2</td>
-  <td><span class="pos">+4.5%</span></td>
-  <td><span class="pos">+2.10pp</span></td>
-  <td><span class="pos">11.8</span></td>
-  <td><span class="pos">⚡83% (4)</span></td>
-  <td class="contracts">
-    
-      2027-01-15 / Strike $15 / OI 3,663 / IV 70% / Vol 13<br>
-    
-      2028-01-21 / Strike $15 / OI 3,441 / IV 87% / Vol 4<br>
-    
-      2027-01-15 / Strike $50 / OI 3,226 / IV 102% / Vol 1<br>
-    
-      2027-01-15 / Strike $12 / OI 2,738 / IV 82% / Vol 12<br>
-    
-      2027-01-15 / Strike $20 / OI 2,712 / IV 75% / Vol 18<br>
-    
-  </td>
-</tr>
 
 </tbody>
 </table>
@@ -1365,7 +1286,7 @@
 
 </tbody>
 </table>
-<h3>Communication Services（1 只）</h3>
+<h3>Communication Services（2 只）</h3>
 <table>
 <thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
 <tbody>
@@ -1387,6 +1308,55 @@
       2027-01-15 / Strike $35 / OI 12,593 / IV 39% / Vol 8<br>
     
       2027-01-15 / Strike $42 / OI 11,365 / IV 50% / Vol 10<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">T</td>
+  <td class="score">58.2</td>
+  <td><span class="pos">+3.8%</span></td>
+  <td><span class="pos">+4.37pp</span></td>
+  <td><span class="pos">4.1</span></td>
+  <td><span class="">25% (3)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $30 / OI 49,224 / IV 35% / Vol 757<br>
+    
+      2027-01-15 / Strike $27 / OI 21,872 / IV 33% / Vol 6,111<br>
+    
+      2027-01-15 / Strike $25 / OI 17,231 / IV 32% / Vol 551<br>
+    
+      2027-01-15 / Strike $32 / OI 10,868 / IV 35% / Vol 268<br>
+    
+      2028-01-21 / Strike $25 / OI 8,657 / IV 31% / Vol 289<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Materials（1 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">FMC</td>
+  <td class="score">54.2</td>
+  <td><span class="pos">+4.5%</span></td>
+  <td><span class="pos">+2.10pp</span></td>
+  <td><span class="pos">11.8</span></td>
+  <td><span class="pos">⚡83% (4)</span></td>
+  <td class="contracts">
+    
+      2027-01-15 / Strike $15 / OI 3,663 / IV 70% / Vol 13<br>
+    
+      2028-01-21 / Strike $15 / OI 3,441 / IV 87% / Vol 4<br>
+    
+      2027-01-15 / Strike $50 / OI 3,226 / IV 102% / Vol 1<br>
+    
+      2027-01-15 / Strike $12 / OI 2,738 / IV 82% / Vol 12<br>
+    
+      2027-01-15 / Strike $20 / OI 2,712 / IV 75% / Vol 18<br>
     
   </td>
 </tr>
@@ -1435,7 +1405,7 @@
 </ul>
 </div>
 
-<p class="footer">数据交易日：2026-07-02 · 生成时间：2026-07-04 09:08:48 · LEAPS 选股系统 v0.1.0</p>
+<p class="footer">数据交易日：2026-07-02 · 生成时间：2026-07-06 01:25:41 · LEAPS 选股系统 v0.1.0</p>
 
 </body>
 </html>
