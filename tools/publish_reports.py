@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import html
+import os
 import re
 import shutil
 import subprocess
@@ -29,7 +30,7 @@ class Project:
 
 PROJECTS = (
     Project("canslim", "CANSLIM", "CAN SLIM / VCP / pocket pivot strategy reports.", WORKSPACE / "Stock" / "CANSLIM" / "reports", ("*.html",)),
-    Project("leapsstock", "LeapsStock", "LEAPS option OI / IV / volume screening daily reports.", WORKSPACE / "Stock" / "LeapsStock" / "data" / "reports", ("*.html",)),
+    Project("leapsstock", "LeapsStock", "LEAPS option OI / IV / volume screening daily reports.", Path(os.environ.get("LEAPS_REPORTS_DIR", str(WORKSPACE / "LeapsStock" / "data" / "reports"))), ("*.html",)),
     Project("twitterclaudebot", "TwitterClaudeBot", "X/Twitter finance account stock mention reports.", WORKSPACE / "Stock" / "TwitterClaudeBot" / "reports", ("*.md",), True),
 )
 
@@ -181,43 +182,36 @@ def render_markdown(markdown: str, title: str) -> str:
 """
 
 
-def clean_generated_dirs() -> None:
-    for project in PROJECTS:
-        target = SITE_ROOT / project.slug
-        if target.exists():
-            shutil.rmtree(target)
-
-
 def collect_reports(dry_run: bool) -> dict[str, list[Report]]:
+    """Merge local outputs into the published archive; preserve other hosts' reports."""
     reports: dict[str, list[Report]] = {}
     for project in PROJECTS:
-        project_reports: list[Report] = []
-        if not project.source_dir.exists():
-            reports[project.slug] = []
-            continue
-
-        sources: list[Path] = []
+        target = SITE_ROOT / project.slug / "reports"
+        by_name: dict[str, Report] = {}
+        # Existing published reports are also inputs, including projects absent on this host.
+        for archived in sorted(target.glob("*.html")):
+            by_name[archived.name] = Report(
+                project, title_from_name(archived), report_date(archived),
+                archived, archived, f"{project.slug}/reports/{archived.name}",
+            )
+        sources: set[Path] = set()
         for pattern in project.patterns:
-            sources.extend(project.source_dir.glob(pattern))
-
-        for source in sorted(set(sources)):
-            date_key = report_date(source)
+            sources.update(project.source_dir.glob(pattern))
+        for source in sorted(sources):
             output_name = f"{source.stem}.html" if project.markdown else source.name
-            output = SITE_ROOT / project.slug / "reports" / output_name
-            href = f"{project.slug}/reports/{output_name}"
+            output = target / output_name
             title = title_from_name(source)
-            project_reports.append(Report(project, title, date_key, source, output, href))
-
-            if dry_run:
-                continue
-            output.parent.mkdir(parents=True, exist_ok=True)
-            if project.markdown:
-                html_doc = render_markdown(source.read_text(encoding="utf-8"), title)
-                output.write_text(html_doc, encoding="utf-8")
-            else:
-                shutil.copy2(source, output)
-
-        reports[project.slug] = sorted(project_reports, key=lambda item: (item.date_key, item.title), reverse=True)
+            by_name[output_name] = Report(
+                project, title, report_date(source), source, output,
+                f"{project.slug}/reports/{output_name}",
+            )
+            if not dry_run:
+                target.mkdir(parents=True, exist_ok=True)
+                if project.markdown:
+                    output.write_text(render_markdown(source.read_text(encoding="utf-8"), title), encoding="utf-8")
+                elif source.resolve() != output.resolve():
+                    shutil.copy2(source, output)
+        reports[project.slug] = sorted(by_name.values(), key=lambda item: (item.date_key, item.title), reverse=True)
     return reports
 
 
@@ -328,15 +322,16 @@ def git_commit_and_push() -> bool:
     ensure_git()
     sh(["git", "add", "."])
     status = sh(["git", "status", "--short"])
-    if not status:
-        print("No changes to commit.")
-        return False
-    sh(["git", "commit", "-m", f"Publish reports {TODAY}"])
+    changed = bool(status)
+    if changed:
+        sh(["git", "commit", "-m", f"Publish reports {TODAY}"])
+    else:
+        print("No changes to commit; retrying push if a previous push failed.")
     remote = sh(["git", "remote"])
     if "origin" not in remote.splitlines():
         raise SystemExit("No git remote named origin. Add one, then rerun with --push.")
     sh(["git", "push", "-u", "origin", "main"])
-    return True
+    return changed
 
 
 def main() -> int:
@@ -345,7 +340,6 @@ def main() -> int:
 
     if not args.dry_run:
         ensure_git()
-        clean_generated_dirs()
 
     all_reports = collect_reports(args.dry_run)
     write_indexes(all_reports, args.dry_run)

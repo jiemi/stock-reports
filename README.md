@@ -17,3 +17,5 @@ Equivalent explicit command:
 Only generated report files are copied into this repository. Source projects,
 databases, cookies, environment files, and other runtime data stay outside this
 site.
+
+On this server LeapsStock reports are read from the sibling `LeapsStock/data/reports` directory. Override with `LEAPS_REPORTS_DIR` if needed. Publishing merges local reports into the existing archive and preserves reports from other machines and projects.
