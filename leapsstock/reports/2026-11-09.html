@@ -1,0 +1,1460 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>LEAPS 选股日报 — 2026-11-09</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 1200px; margin: 2rem auto; padding: 0 1rem; color: #1d1d1f; line-height: 1.6; }
+  h1 { border-bottom: 2px solid #0071e3; padding-bottom: .5rem; }
+  h2 { color: #0071e3; margin-top: 2.5rem; border-left: 4px solid #0071e3; padding-left: .7rem; }
+  h3 { color: #444; }
+  .summary { background: #f5f5f7; padding: 1rem 1.5rem; border-radius: 8px; }
+  .summary ul { margin: .3rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 14px; }
+  th, td { padding: .55rem .8rem; border-bottom: 1px solid #e5e5e7; text-align: left; vertical-align: top; }
+  th { background: #fafafa; font-weight: 600; }
+  tr:hover { background: #fbfbfd; }
+  .ticker { font-weight: 700; color: #0071e3; }
+  .score { font-weight: 700; }
+  .pos { color: #34c759; font-weight: 600; }
+  .neg { color: #ff3b30; font-weight: 600; }
+  .neutral { color: #8e8e93; }
+  .hot-sectors { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .hot-sectors .item { background: linear-gradient(135deg, #ff9500, #ff3b30); color: white; padding: .5rem 1rem; border-radius: 6px; font-weight: 600; }
+  .note { background: #fff8e1; border-left: 4px solid #ffb700; padding: .8rem 1rem; border-radius: 4px; margin: 1.5rem 0; font-size: 14px; }
+  .contracts { font-size: 12px; color: #555; line-height: 1.4; }
+  .signal { background: #f7fbff; border: 1px solid #d6eaff; border-radius: 8px; padding: 1rem; margin: 1rem 0; }
+  .grade { display: inline-block; min-width: 1.8rem; text-align: center; border-radius: 4px; background: #0071e3; color: white; font-weight: 700; padding: 1px 6px; }
+  .footer { text-align: center; color: #8e8e93; font-size: 13px; margin-top: 3rem; }
+  code { background: #f5f5f7; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>📈 LEAPS 选股日报 — 2026-11-09</h1>
+
+<p>监控远期期权可比净增仓、固定合约IV变化、持仓延续及股价配合。<b>真实主动买卖、开平仓和机构身份未知</b>；观察分不是上涨概率。</p>
+
+<h2>📊 总览</h2>
+<div class="summary">
+<ul>
+  <li><b>扫描股票数</b>：1036（包含无 LEAPS 的股票）</li>
+  <li><b>有期权快照入库</b>：924 只</li>
+  <li><b>进入评分</b>：599（过滤掉 OI &lt; 1000 的低流动性标的）</li>
+  <li><b>Top N</b>：20</li>
+  <li><b>数据交易日</b>：<code>2026-11-09</code></li>
+  <li><b>报告生成时间</b>：<code>2026-11-09 23:40:35</code></li>
+  <li><b>数据模式</b>：<code>历史积累中（16个快照；逐股检查完整历史）</code></li>
+  <li><b>必要历史对比完整</b>：0/599；需要连续 30 个历史交易日</li>
+  <li><b>命中策略</b>：0 只</li>
+</ul>
+
+
+<p><b>🔥 当日热门行业（按 5 日 ETF 收益排名）</b></p>
+<div class="hot-sectors">
+<div class="item">1. Communication Services (XLC)<br>5d 7.08% | 20d -3.67%</div>
+<div class="item">2. Consumer Discretionary (XLY)<br>5d 2.41% | 20d 7.78%</div>
+<div class="item">3. Real Estate (XLRE)<br>5d 2.29% | 20d 6.49%</div>
+
+</div>
+
+</div>
+
+<h2>🎯 合格 Top 5</h2>
+<p class="note"><b>未命中策略。</b>没有满足完整历史对比及信号门槛的股票，Top 5 留空。</p>
+<h2>📊 每日 Top 5 后续表现</h2>
+<div class="note">
+从功能启用后向前积累，不回填历史选股。必要 OI/IV 对比数据不完整即未命中；合格信号不足五只时不凑数。
+收益从实际生成信号后的首个开盘计算，按美股交易日计数，使用 yfinance 复权价格（含拆股、分红调整）。
+回撤按收盘路径计算；观察期未结束或行情不齐不记零收益。重复上榜逐日保留，独立事件按同一股票间隔20个交易日计算。
+同一时期样本相互重叠，表中收益不是账户净值。市场基准为IWB；另行保存SPY与行业ETF对照。
+</div>
+<p>已归档 14 个交易日，0 条合格 Top 5 事件。
+最近归档：2026-11-09，历史完整 0/599，入选 0 只。</p>
+
+<p class="neutral">暂无合格信号，未命中策略；继续积累期权快照，尚无可评价的后续收益。</p>
+
+<h2>🎯 Top 20 候选观察（不等于命中）</h2>
+<p class="contracts" style="margin-top: -.5rem">正式排序使用固定规则观察分；Codex只提供辅助复核，不改变命中或名次。</p>
+
+<h2>🧠 满足看涨观察条件的候选</h2>
+<p class="neutral">暂无合格信号，不以候选排名代替策略命中。</p>
+<div class="signal">
+<table>
+<thead><tr><th>#</th><th>Ticker</th><th>辅助意见</th><th>辅助复核分</th><th>观察分</th><th>辅助原分</th><th>主要理由</th><th>风险/削弱项</th></tr></thead>
+<tbody>
+
+</tbody>
+</table>
+</div>
+
+<p class="contracts" style="margin-top: -.5rem">C/P = Call/Put 新增 OI 偏度（持仓结构比，不是买入方向）· Block已停用；正增合计不等于净增· Exp# = 显著 OI 增长涉及的到期日数量</p>
+<table>
+<thead><tr><th>#</th><th>Ticker</th><th>状态</th><th>行业</th><th>辅助复核分</th><th>观察分</th><th>辅助原分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>Exp#</th><th>Vol/OI</th><th>Call OI</th></tr></thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td class="ticker">FRMI</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；OI增量与对应交易日成交量不一致，需核对；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Real Estate</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">61.0</td>
+  <td><span class="pos">+1.7%</span></td>
+  <td><span class="pos">+30.24pp</span></td>
+  <td><span class="pos">24.6</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>3</td>
+  <td><span class="">0.05</span></td>
+  <td>130,402</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td class="ticker">PLNT</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；缺少IV历史变化；观察起点Put OI基线覆盖不足；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">58.8</td>
+  <td><span class="pos">+60.4%</span></td>
+  <td><span class="neutral">—</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>1</td>
+  <td><span class="">0.07</span></td>
+  <td>1,380</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td class="ticker">GSAT</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Communication Services</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">58.0</td>
+  <td><span class="pos">+5.3%</span></td>
+  <td><span class="pos">+3.76pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>1</td>
+  <td><span class="">0.11</span></td>
+  <td>32,289</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td class="ticker">APTV</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">57.8</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+5.39pp</span></td>
+  <td><span class="neutral">1.3</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="pos">1.30</span></td>
+  <td>1,182</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td class="ticker">NBIS</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；OI增量与对应交易日成交量不一致，需核对；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Communication Services</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">56.4</td>
+  <td><span class="pos">+1.4%</span></td>
+  <td><span class="pos">+2.46pp</span></td>
+  <td><span class="neutral">2.4</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>6</td>
+  <td><span class="">0.03</span></td>
+  <td>251,435</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td class="ticker">HLT</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">55.5</td>
+  <td><span class="pos">+6.5%</span></td>
+  <td><span class="pos">+4.60pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>1</td>
+  <td><span class="">0.15</span></td>
+  <td>4,136</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td class="ticker">APP</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Communication Services</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">55.3</td>
+  <td><span class="pos">+1.1%</span></td>
+  <td><span class="pos">+22.47pp</span></td>
+  <td><span class="neutral">1.3</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>2</td>
+  <td><span class="">0.09</span></td>
+  <td>56,544</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td class="ticker">WU</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足</td>
+  <td>Financials</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">54.1</td>
+  <td><span class="pos">+21.7%</span></td>
+  <td><span class="pos">+4.12pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>1</td>
+  <td><span class="">0.15</span></td>
+  <td>92,406</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td class="ticker">CHYM</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Technology</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">53.1</td>
+  <td><span class="pos">+3.0%</span></td>
+  <td><span class="pos">+8.72pp</span></td>
+  <td><span class="neg">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>3</td>
+  <td><span class="neutral">0.76</span></td>
+  <td>15,693</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td class="ticker">RKLB</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；新增持仓率历史基线不足</td>
+  <td>Industrials</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">50.8</td>
+  <td><span class="pos">+0.9%</span></td>
+  <td><span class="pos">+12.55pp</span></td>
+  <td><span class="neutral">2.4</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>5</td>
+  <td><span class="">0.03</span></td>
+  <td>251,926</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td class="ticker">SPG</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；OI增量与对应交易日成交量不一致，需核对；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Real Estate</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">50.3</td>
+  <td><span class="pos">+0.4%</span></td>
+  <td><span class="pos">+13.07pp</span></td>
+  <td><span class="pos">16.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="">0.13</span></td>
+  <td>4,232</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td class="ticker">MGM</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；OI增量与对应交易日成交量不一致，需核对；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">49.4</td>
+  <td><span class="pos">+0.8%</span></td>
+  <td><span class="pos">+4.31pp</span></td>
+  <td><span class="pos">6.5</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>1</td>
+  <td><span class="">0.10</span></td>
+  <td>39,675</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td class="ticker">BYD</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">49.2</td>
+  <td><span class="pos">+7.4%</span></td>
+  <td><span class="pos">+0.54pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="">0.19</span></td>
+  <td>3,005</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td class="ticker">RVMD</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Healthcare</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.9</td>
+  <td><span class="pos">+3.3%</span></td>
+  <td><span class="pos">+8.99pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="">0.11</span></td>
+  <td>6,132</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td class="ticker">GOOGL</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（15/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；OI增量与对应交易日成交量不一致，需核对；持仓延续所需可比合约缺失；新增持仓率历史基线不足</td>
+  <td>Communication Services</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+2.1%</span></td>
+  <td><span class="pos">+1.12pp</span></td>
+  <td><span class="neutral">2.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>5</td>
+  <td><span class="">0.04</span></td>
+  <td>746,823</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td class="ticker">NFLX</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（15/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；OI增量与对应交易日成交量不一致，需核对；持仓延续所需可比合约缺失；新增持仓率历史基线不足</td>
+  <td>Communication Services</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+0.57pp</span></td>
+  <td><span class="neutral">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>4</td>
+  <td><span class="">0.02</span></td>
+  <td>964,624</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td class="ticker">TRV</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；可比合约OI覆盖不足；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Financials</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+6.4%</span></td>
+  <td><span class="pos">+2.29pp</span></td>
+  <td><span class="neg">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="neutral">0.54</span></td>
+  <td>1,771</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td class="ticker">DKNG</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Consumer Discretionary</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.3</td>
+  <td><span class="pos">+0.1%</span></td>
+  <td><span class="pos">+1.51pp</span></td>
+  <td><span class="neutral">2.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>3</td>
+  <td><span class="">0.01</span></td>
+  <td>234,328</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td class="ticker">VICR</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；缺少IV历史变化；可比合约OI覆盖不足；观察起点Put OI基线覆盖不足；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Technology</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.3</td>
+  <td><span class="pos">+11.2%</span></td>
+  <td><span class="neutral">—</span></td>
+  <td><span class="pos">8.7</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>0</td>
+  <td><span class="neutral">0.60</span></td>
+  <td>1,483</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td class="ticker">PFE</td>
+  <td>未命中：连续30个交易日OI/IV历史不足（14/30）；当日期权成交量缺失或异常；缺少OI历史Z-score；持仓延续所需可比合约缺失；新增持仓率历史基线不足；同到期同行权价Call/Put IV对比覆盖不足</td>
+  <td>Healthcare</td>
+  <td class="score">—</td>
+  <td>0.0</td>
+  <td class="score">48.1</td>
+  <td><span class="pos">+0.4%</span></td>
+  <td><span class="pos">+2.72pp</span></td>
+  <td><span class="pos">3.5</span></td>
+  <td><span class="neutral">—</span></td>
+  <td>4</td>
+  <td><span class="">0.03</span></td>
+  <td>375,468</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>🔎 看涨观察证据与时间口径</h2>
+<p class="contracts">规则参数为待验证研究设置：观察3个交易日，新增持仓至少保留80%。方向始终未知；观察起点不是信号发出日，确认日之后才计算可参与收益。</p>
+<p class="contracts">OI所属日按供应商前一交易日规则推定；IV观察日仅代表抓取日，未提供独立报价时间戳。日成交量使用供应商对应交易日，不能与同日快照的OI直接比较。</p>
+<p class="contracts">持仓保留率只衡量同一组合约相对基准的净增规模，不能确认原仓位或交易者是否仍在。</p>
+<div style="overflow-x:auto"><table><thead><tr><th>股票</th><th>净增 / 正增 / 减少</th><th>增仓异常分</th><th>固定Call IV变化 / 相对Put</th><th>持仓保留</th><th>股票 / 行业五日</th><th>观察起点 / 确认日</th><th>OI所属日 / IV观察日</th><th>方向</th></tr></thead><tbody>
+<tr>
+<td>FRMI</td><td>2241.0 / 2729.0 / 488.0</td>
+<td>—</td><td><span class="pos">+30.24pp</span> / <span class="pos">+26.98pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-24.7%</span> / <span class="pos">+2.3%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>PLNT</td><td>504.0 / 504.0 / 0.0</td>
+<td>—</td><td><span class="neutral">—</span> / <span class="neutral">—</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+9.8%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>GSAT</td><td>1619.0 / 1625.0 / 6.0</td>
+<td>—</td><td><span class="pos">+3.76pp</span> / <span class="pos">+4.79pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+3.4%</span> / <span class="pos">+7.1%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>APTV</td><td>4.0 / 4.0 / 0.0</td>
+<td>—</td><td><span class="pos">+5.39pp</span> / <span class="pos">+4.48pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-9.8%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>NBIS</td><td>3404.0 / 4117.0 / 713.0</td>
+<td>—</td><td><span class="pos">+2.46pp</span> / <span class="neg">-1.17pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+0.0%</span> / <span class="pos">+7.1%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>HLT</td><td>251.0 / 252.0 / 1.0</td>
+<td>—</td><td><span class="pos">+4.60pp</span> / <span class="pos">+6.04pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+2.3%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>APP</td><td>594.0 / 1320.0 / 726.0</td>
+<td>—</td><td><span class="pos">+22.47pp</span> / <span class="pos">+51.68pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+79.2%</span> / <span class="pos">+7.1%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>WU</td><td>16481.0 / 16482.0 / 1.0</td>
+<td>—</td><td><span class="pos">+4.12pp</span> / <span class="pos">+17.99pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+9.1%</span> / <span class="pos">+0.7%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>CHYM</td><td>459.0 / 649.0 / 190.0</td>
+<td>—</td><td><span class="pos">+8.72pp</span> / <span class="pos">+14.81pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+14.0%</span> / <span class="neg">-1.9%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>RKLB</td><td>2163.0 / 2948.0 / 785.0</td>
+<td>—</td><td><span class="pos">+12.55pp</span> / <span class="pos">+17.05pp</span></td>
+<td><span class="pos">+100.0%</span></td><td><span class="pos">+13.0%</span> / <span class="neg">-0.5%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>SPG</td><td>16.0 / 16.0 / 0.0</td>
+<td>—</td><td><span class="pos">+13.07pp</span> / <span class="pos">+19.96pp</span></td>
+<td><span class="pos">+100.0%</span></td><td><span class="pos">+5.1%</span> / <span class="pos">+2.3%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>MGM</td><td>316.0 / 421.0 / 105.0</td>
+<td>—</td><td><span class="pos">+4.31pp</span> / <span class="pos">+6.61pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+7.7%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>BYD</td><td>208.0 / 208.0 / 0.0</td>
+<td>—</td><td><span class="pos">+0.54pp</span> / <span class="neg">-0.96pp</span></td>
+<td><span class="pos">+100.0%</span></td><td><span class="pos">+1.1%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>RVMD</td><td>197.0 / 200.0 / 3.0</td>
+<td>—</td><td><span class="pos">+8.99pp</span> / <span class="pos">+13.89pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+6.4%</span> / <span class="pos">+2.0%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>GOOGL</td><td>15588.0 / 16509.0 / 921.0</td>
+<td>—</td><td><span class="pos">+1.12pp</span> / <span class="pos">+0.70pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+3.3%</span> / <span class="pos">+7.1%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>NFLX</td><td>2705.0 / 3782.0 / 1077.0</td>
+<td>—</td><td><span class="pos">+0.57pp</span> / <span class="pos">+0.38pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="pos">+2.6%</span> / <span class="pos">+7.1%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>TRV</td><td>107.0 / 107.0 / 0.0</td>
+<td>—</td><td><span class="pos">+2.29pp</span> / <span class="pos">+3.35pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-0.9%</span> / <span class="pos">+0.7%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>DKNG</td><td>274.0 / 1817.0 / 1543.0</td>
+<td>—</td><td><span class="pos">+1.51pp</span> / <span class="pos">+2.66pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-14.3%</span> / <span class="pos">+2.4%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>VICR</td><td>148.0 / 148.0 / 0.0</td>
+<td>—</td><td><span class="neutral">—</span> / <span class="neutral">—</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-6.5%</span> / <span class="neg">-1.9%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr><tr>
+<td>PFE</td><td>1464.0 / 2173.0 / 709.0</td>
+<td>—</td><td><span class="pos">+2.72pp</span> / <span class="pos">+5.16pp</span></td>
+<td><span class="neutral">—</span></td><td><span class="neg">-3.3%</span> / <span class="pos">+2.0%</span></td>
+<td>2026-11-05 / 尚未确认</td>
+<td>2026-11-06 / 2026-11-09</td><td>未知（缺少逐笔买卖及开平仓标记）</td>
+</tr></tbody></table></div>
+
+<h2>📋 辅助原分明细（不决定命中）</h2>
+<table>
+<thead><tr>
+  <th>Ticker</th>
+  <th>行业热度<br><small>(×15)</small></th>
+  <th>OI 增量<br><small>(×20)</small></th>
+  <th>IV 上扬<br><small>(×20)</small></th>
+  <th>异常成交<br><small>(×15)</small></th>
+  <th>停用Block<br><small>(×0)</small></th>
+  <th>看涨偏度<br><small>(×10)</small></th>
+  <th>到期扩散<br><small>(×10)</small></th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">FRMI</td>
+  <td>0.85→12.8</td>
+  <td>0.30→6.0</td>
+  <td>1.00→20.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.54→5.4</td>
+</tr>
+<tr>
+  <td class="ticker">PLNT</td>
+  <td>0.85→12.8</td>
+  <td>1.00→20.0</td>
+  <td>0.41→8.3</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.12→1.2</td>
+</tr>
+<tr>
+  <td class="ticker">GSAT</td>
+  <td>1.00→15.0</td>
+  <td>0.50→10.0</td>
+  <td>0.65→13.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.12→1.2</td>
+</tr>
+<tr>
+  <td class="ticker">APTV</td>
+  <td>0.85→12.8</td>
+  <td>0.30→6.0</td>
+  <td>0.85→17.0</td>
+  <td>0.85→12.8</td>
+  <td>0.05→0.0</td>
+  <td>0.30→3.0</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">NBIS</td>
+  <td>1.00→15.0</td>
+  <td>0.30→6.0</td>
+  <td>0.65→13.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.70→7.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">HLT</td>
+  <td>0.85→12.8</td>
+  <td>0.50→10.0</td>
+  <td>0.65→13.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.12→1.2</td>
+</tr>
+<tr>
+  <td class="ticker">APP</td>
+  <td>1.00→15.0</td>
+  <td>0.30→6.0</td>
+  <td>1.00→20.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.50→5.0</td>
+  <td>0.30→3.0</td>
+</tr>
+<tr>
+  <td class="ticker">WU</td>
+  <td>0.50→7.5</td>
+  <td>0.70→14.0</td>
+  <td>0.65→13.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.12→1.2</td>
+</tr>
+<tr>
+  <td class="ticker">CHYM</td>
+  <td>0.20→3.0</td>
+  <td>0.30→6.0</td>
+  <td>0.85→17.0</td>
+  <td>0.65→9.8</td>
+  <td>0.05→0.0</td>
+  <td>0.30→3.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">RKLB</td>
+  <td>0.20→3.0</td>
+  <td>0.30→6.0</td>
+  <td>1.00→20.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.70→7.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">SPG</td>
+  <td>0.85→12.8</td>
+  <td>0.30→6.0</td>
+  <td>1.00→20.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>0.30→3.0</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">MGM</td>
+  <td>0.85→12.8</td>
+  <td>0.30→6.0</td>
+  <td>0.65→13.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>0.85→8.5</td>
+  <td>0.12→1.2</td>
+</tr>
+<tr>
+  <td class="ticker">BYD</td>
+  <td>0.85→12.8</td>
+  <td>0.50→10.0</td>
+  <td>0.40→8.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">RVMD</td>
+  <td>0.50→7.5</td>
+  <td>0.30→6.0</td>
+  <td>0.85→17.0</td>
+  <td>0.20→3.0</td>
+  <td>0.05→0.0</td>
+  <td>1.00→10.0</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">GOOGL</td>
+  <td>1.00→15.0</td>
+  <td>0.30→6.0</td>
+  <td>0.40→8.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.50→5.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">NFLX</td>
+  <td>1.00→15.0</td>
+  <td>0.30→6.0</td>
+  <td>0.40→8.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.50→5.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">TRV</td>
+  <td>0.50→7.5</td>
+  <td>0.50→10.0</td>
+  <td>0.65→13.0</td>
+  <td>0.65→9.8</td>
+  <td>0.05→0.0</td>
+  <td>0.30→3.0</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">DKNG</td>
+  <td>0.85→12.8</td>
+  <td>0.30→6.0</td>
+  <td>0.40→8.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.70→7.0</td>
+  <td>0.90→9.0</td>
+</tr>
+<tr>
+  <td class="ticker">VICR</td>
+  <td>0.20→3.0</td>
+  <td>0.50→10.0</td>
+  <td>0.58→11.7</td>
+  <td>0.65→9.8</td>
+  <td>0.05→0.0</td>
+  <td>0.85→8.5</td>
+  <td>0.05→0.5</td>
+</tr>
+<tr>
+  <td class="ticker">PFE</td>
+  <td>0.50→7.5</td>
+  <td>0.30→6.0</td>
+  <td>0.65→13.0</td>
+  <td>0.05→0.8</td>
+  <td>0.05→0.0</td>
+  <td>0.70→7.0</td>
+  <td>0.90→9.0</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>🔬 OI 质量原始指标</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Call 新增 OI</th><th>Put 新增 OI</th><th>Call/Put</th><th>Block 合约</th><th>Block OI 占比</th><th>到期日数</th><th>头部到期占比</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">FRMI</td>
+  <td>2,729</td>
+  <td>111</td>
+  <td>24.6</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>3</td>
+  <td>81%</td>
+</tr>
+<tr>
+  <td class="ticker">PLNT</td>
+  <td>504</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">GSAT</td>
+  <td>1,625</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">APTV</td>
+  <td>4</td>
+  <td>3</td>
+  <td>1.3</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">NBIS</td>
+  <td>4,117</td>
+  <td>1,720</td>
+  <td>2.4</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>6</td>
+  <td>34%</td>
+</tr>
+<tr>
+  <td class="ticker">HLT</td>
+  <td>252</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">APP</td>
+  <td>1,320</td>
+  <td>1,000</td>
+  <td>1.3</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>2</td>
+  <td>76%</td>
+</tr>
+<tr>
+  <td class="ticker">WU</td>
+  <td>16,482</td>
+  <td>46</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">CHYM</td>
+  <td>649</td>
+  <td>679</td>
+  <td>1.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>3</td>
+  <td>41%</td>
+</tr>
+<tr>
+  <td class="ticker">RKLB</td>
+  <td>2,948</td>
+  <td>1,214</td>
+  <td>2.4</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>5</td>
+  <td>49%</td>
+</tr>
+<tr>
+  <td class="ticker">SPG</td>
+  <td>16</td>
+  <td>0</td>
+  <td>16.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">MGM</td>
+  <td>421</td>
+  <td>65</td>
+  <td>6.5</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>1</td>
+  <td>100%</td>
+</tr>
+<tr>
+  <td class="ticker">BYD</td>
+  <td>208</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">RVMD</td>
+  <td>200</td>
+  <td>0</td>
+  <td>50.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">GOOGL</td>
+  <td>16,509</td>
+  <td>8,376</td>
+  <td>2.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>5</td>
+  <td>68%</td>
+</tr>
+<tr>
+  <td class="ticker">NFLX</td>
+  <td>3,782</td>
+  <td>3,718</td>
+  <td>1.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>4</td>
+  <td>63%</td>
+</tr>
+<tr>
+  <td class="ticker">TRV</td>
+  <td>107</td>
+  <td>112</td>
+  <td>1.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">DKNG</td>
+  <td>1,817</td>
+  <td>890</td>
+  <td>2.0</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>3</td>
+  <td>67%</td>
+</tr>
+<tr>
+  <td class="ticker">VICR</td>
+  <td>148</td>
+  <td>17</td>
+  <td>8.7</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>0</td>
+  <td>0%</td>
+</tr>
+<tr>
+  <td class="ticker">PFE</td>
+  <td>2,173</td>
+  <td>621</td>
+  <td>3.5</td>
+  <td>0</td>
+  <td>0%</td>
+  <td>4</td>
+  <td>32%</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>🏭 按行业分组</h2>
+<h3>Real Estate（2 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">FRMI</td>
+  <td class="score">61.0</td>
+  <td><span class="pos">+1.7%</span></td>
+  <td><span class="pos">+30.24pp</span></td>
+  <td><span class="pos">24.6</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-05-21 / Strike $4 / OI 18,394 / IV 123% / Vol 1<br>
+    
+      2028-01-21 / Strike $22 / OI 14,383 / IV 124% / Vol 74<br>
+    
+      2028-01-21 / Strike $10 / OI 12,823 / IV 114% / Vol 62<br>
+    
+      2028-12-15 / Strike $12 / OI 10,731 / IV 102% / Vol 1<br>
+    
+      2027-06-17 / Strike $2 / OI 6,129 / IV 123% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">SPG</td>
+  <td class="score">50.3</td>
+  <td><span class="pos">+0.4%</span></td>
+  <td><span class="pos">+13.07pp</span></td>
+  <td><span class="pos">16.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2029-01-19 / Strike $210 / OI 743 / IV 35% / Vol 2<br>
+    
+      2028-01-21 / Strike $240 / OI 443 / IV 32% / Vol 5<br>
+    
+      2027-06-17 / Strike $210 / OI 415 / IV 41% / Vol 1<br>
+    
+      2027-06-17 / Strike $240 / OI 331 / IV 32% / Vol 3<br>
+    
+      2028-01-21 / Strike $220 / OI 248 / IV 35% / Vol 3<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Consumer Discretionary（6 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">PLNT</td>
+  <td class="score">58.8</td>
+  <td><span class="pos">+60.4%</span></td>
+  <td><span class="neutral">—</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $80 / OI 617 / IV 45% / Vol 35<br>
+    
+      2029-01-19 / Strike $22 / OI 434 / IV 63% / Vol 2<br>
+    
+      2029-01-19 / Strike $30 / OI 140 / IV 52% / Vol 1<br>
+    
+      2027-05-21 / Strike $60 / OI 90 / IV 48% / Vol 10<br>
+    
+      2028-01-21 / Strike $48 / OI 58 / IV 52% / Vol 6<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">APTV</td>
+  <td class="score">57.8</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+5.39pp</span></td>
+  <td><span class="neutral">1.3</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2029-01-19 / Strike $22 / OI 693 / IV 50% / Vol 1,386<br>
+    
+      2028-01-21 / Strike $45 / OI 224 / IV 42% / Vol 2<br>
+    
+      2027-05-21 / Strike $52 / OI 80 / IV 43% / Vol 4<br>
+    
+      2028-01-21 / Strike $50 / OI 74 / IV 43% / Vol 2<br>
+    
+      2027-05-21 / Strike $50 / OI 60 / IV 44% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">HLT</td>
+  <td class="score">55.5</td>
+  <td><span class="pos">+6.5%</span></td>
+  <td><span class="pos">+4.60pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-09-17 / Strike $350 / OI 277 / IV 33% / Vol 1<br>
+    
+      2028-01-21 / Strike $370 / OI 274 / IV 32% / Vol 7<br>
+    
+      2027-06-17 / Strike $420 / OI 252 / IV 28% / Vol 29<br>
+    
+      2028-01-21 / Strike $390 / OI 244 / IV 30% / Vol 2<br>
+    
+      2028-01-21 / Strike $400 / OI 211 / IV 30% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">MGM</td>
+  <td class="score">49.4</td>
+  <td><span class="pos">+0.8%</span></td>
+  <td><span class="pos">+4.31pp</span></td>
+  <td><span class="pos">6.5</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $50 / OI 8,123 / IV 38% / Vol 4<br>
+    
+      2028-01-21 / Strike $75 / OI 6,456 / IV 38% / Vol 8<br>
+    
+      2028-01-21 / Strike $40 / OI 3,381 / IV 40% / Vol 3,097<br>
+    
+      2027-06-17 / Strike $50 / OI 2,692 / IV 38% / Vol 50<br>
+    
+      2029-01-19 / Strike $15 / OI 2,329 / IV 51% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">BYD</td>
+  <td class="score">49.2</td>
+  <td><span class="pos">+7.4%</span></td>
+  <td><span class="pos">+0.54pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $35 / OI 779 / IV 41% / Vol 24<br>
+    
+      2027-12-17 / Strike $35 / OI 665 / IV 48% / Vol 2<br>
+    
+      2027-12-17 / Strike $100 / OI 511 / IV 29% / Vol 28<br>
+    
+      2028-01-21 / Strike $75 / OI 198 / IV 28% / Vol 20<br>
+    
+      2028-01-21 / Strike $80 / OI 174 / IV 29% / Vol 3<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">DKNG</td>
+  <td class="score">48.3</td>
+  <td><span class="pos">+0.1%</span></td>
+  <td><span class="pos">+1.51pp</span></td>
+  <td><span class="neutral">2.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $50 / OI 26,286 / IV 59% / Vol 22<br>
+    
+      2028-01-21 / Strike $38 / OI 23,729 / IV 69% / Vol 1<br>
+    
+      2028-01-21 / Strike $30 / OI 18,243 / IV 58% / Vol 21<br>
+    
+      2028-01-21 / Strike $35 / OI 17,504 / IV 57% / Vol 1<br>
+    
+      2028-01-21 / Strike $55 / OI 14,402 / IV 56% / Vol 10<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Communication Services（5 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">GSAT</td>
+  <td class="score">58.0</td>
+  <td><span class="pos">+5.3%</span></td>
+  <td><span class="pos">+3.76pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $90 / OI 9,066 / IV 25% / Vol 7<br>
+    
+      2028-06-16 / Strike $90 / OI 4,619 / IV 25% / Vol 2<br>
+    
+      2028-01-21 / Strike $100 / OI 2,834 / IV 25% / Vol 6<br>
+    
+      2028-01-21 / Strike $105 / OI 2,547 / IV 28% / Vol 1<br>
+    
+      2028-12-15 / Strike $90 / OI 1,328 / IV 27% / Vol 6<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">NBIS</td>
+  <td class="score">56.4</td>
+  <td><span class="pos">+1.4%</span></td>
+  <td><span class="pos">+2.46pp</span></td>
+  <td><span class="neutral">2.4</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $250 / OI 18,535 / IV 87% / Vol 80<br>
+    
+      2028-01-21 / Strike $350 / OI 17,700 / IV 86% / Vol 44<br>
+    
+      2028-01-21 / Strike $140 / OI 7,626 / IV 92% / Vol 19<br>
+    
+      2028-01-21 / Strike $410 / OI 6,847 / IV 88% / Vol 2<br>
+    
+      2028-12-15 / Strike $180 / OI 6,392 / IV 90% / Vol 3<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">APP</td>
+  <td class="score">55.3</td>
+  <td><span class="pos">+1.1%</span></td>
+  <td><span class="pos">+22.47pp</span></td>
+  <td><span class="neutral">1.3</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-06-17 / Strike $600 / OI 2,910 / IV 64% / Vol 20<br>
+    
+      2028-06-16 / Strike $1060 / OI 1,569 / IV 67% / Vol 7<br>
+    
+      2028-01-21 / Strike $1110 / OI 1,413 / IV 62% / Vol 370<br>
+    
+      2027-06-17 / Strike $610 / OI 1,150 / IV 64% / Vol 24<br>
+    
+      2027-06-17 / Strike $700 / OI 966 / IV 64% / Vol 1<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">GOOGL</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+2.1%</span></td>
+  <td><span class="pos">+1.12pp</span></td>
+  <td><span class="neutral">2.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $650 / OI 22,185 / IV 37% / Vol 18<br>
+    
+      2028-01-21 / Strike $550 / OI 14,782 / IV 35% / Vol 53<br>
+    
+      2027-06-17 / Strike $400 / OI 13,251 / IV 34% / Vol 3,883<br>
+    
+      2027-06-17 / Strike $350 / OI 8,891 / IV 34% / Vol 297<br>
+    
+      2028-01-21 / Strike $600 / OI 8,705 / IV 36% / Vol 138<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">NFLX</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+0.3%</span></td>
+  <td><span class="pos">+0.57pp</span></td>
+  <td><span class="neutral">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-12-17 / Strike $86 / OI 36,206 / IV 39% / Vol 1<br>
+    
+      2027-12-17 / Strike $90 / OI 33,825 / IV 39% / Vol 10<br>
+    
+      2028-01-21 / Strike $100 / OI 25,168 / IV 39% / Vol 512<br>
+    
+      2028-12-15 / Strike $75 / OI 19,661 / IV 40% / Vol 88<br>
+    
+      2027-06-17 / Strike $100 / OI 18,804 / IV 40% / Vol 229<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Financials（2 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">WU</td>
+  <td class="score">54.1</td>
+  <td><span class="pos">+21.7%</span></td>
+  <td><span class="pos">+4.12pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2029-01-19 / Strike $7 / OI 63,001 / IV 46% / Vol 13,656<br>
+    
+      2028-01-21 / Strike $10 / OI 12,100 / IV 45% / Vol 1<br>
+    
+      2028-01-21 / Strike $7 / OI 8,766 / IV 43% / Vol 53<br>
+    
+      2028-01-21 / Strike $15 / OI 2,937 / IV 52% / Vol 2<br>
+    
+      2028-01-21 / Strike $12 / OI 1,327 / IV 49% / Vol 16<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">TRV</td>
+  <td class="score">48.6</td>
+  <td><span class="pos">+6.4%</span></td>
+  <td><span class="pos">+2.29pp</span></td>
+  <td><span class="neg">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-12-17 / Strike $490 / OI 404 / IV 24% / Vol 400<br>
+    
+      2027-12-17 / Strike $470 / OI 171 / IV 25% / Vol 6<br>
+    
+      2027-06-17 / Strike $370 / OI 153 / IV 27% / Vol 2<br>
+    
+      2027-06-17 / Strike $360 / OI 109 / IV 27% / Vol 2<br>
+    
+      2028-01-21 / Strike $390 / OI 92 / IV 27% / Vol 6<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Technology（2 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">CHYM</td>
+  <td class="score">53.1</td>
+  <td><span class="pos">+3.0%</span></td>
+  <td><span class="pos">+8.72pp</span></td>
+  <td><span class="neg">1.0</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-11-19 / Strike $35 / OI 2,250 / IV 56% / Vol 2,265<br>
+    
+      2028-01-21 / Strike $25 / OI 1,583 / IV 58% / Vol 1<br>
+    
+      2028-01-21 / Strike $35 / OI 1,507 / IV 50% / Vol 1<br>
+    
+      2027-11-19 / Strike $32 / OI 1,494 / IV 57% / Vol 2,250<br>
+    
+      2028-01-21 / Strike $38 / OI 1,257 / IV 51% / Vol 3<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">VICR</td>
+  <td class="score">48.3</td>
+  <td><span class="pos">+11.2%</span></td>
+  <td><span class="neutral">—</span></td>
+  <td><span class="pos">8.7</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $450 / OI 263 / IV 89% / Vol 323<br>
+    
+      2028-01-21 / Strike $540 / OI 262 / IV 88% / Vol 32<br>
+    
+      2028-01-21 / Strike $300 / OI 211 / IV 85% / Vol 30<br>
+    
+      2028-01-21 / Strike $400 / OI 144 / IV 86% / Vol 1<br>
+    
+      2028-01-21 / Strike $510 / OI 88 / IV 86% / Vol 4<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Industrials（1 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">RKLB</td>
+  <td class="score">50.8</td>
+  <td><span class="pos">+0.9%</span></td>
+  <td><span class="pos">+12.55pp</span></td>
+  <td><span class="neutral">2.4</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $85 / OI 38,778 / IV 82% / Vol 120<br>
+    
+      2028-01-21 / Strike $90 / OI 22,941 / IV 81% / Vol 59<br>
+    
+      2028-01-21 / Strike $100 / OI 12,688 / IV 80% / Vol 191<br>
+    
+      2028-01-21 / Strike $110 / OI 10,016 / IV 80% / Vol 67<br>
+    
+      2028-01-21 / Strike $210 / OI 7,169 / IV 77% / Vol 1,981<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+<h3>Healthcare（2 只）</h3>
+<table>
+<thead><tr><th>Ticker</th><th>总分</th><th>OI 环比</th><th>IV Δ</th><th>C/P</th><th>Block（停用）</th><th>关键 LEAPS 合约</th></tr></thead>
+<tbody>
+<tr>
+  <td class="ticker">RVMD</td>
+  <td class="score">48.9</td>
+  <td><span class="pos">+3.3%</span></td>
+  <td><span class="pos">+8.99pp</span></td>
+  <td><span class="pos">50+</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2028-01-21 / Strike $200 / OI 984 / IV 54% / Vol 5<br>
+    
+      2028-01-21 / Strike $220 / OI 405 / IV 53% / Vol 10<br>
+    
+      2028-01-21 / Strike $230 / OI 321 / IV 53% / Vol 1<br>
+    
+      2028-01-21 / Strike $120 / OI 306 / IV 58% / Vol 1<br>
+    
+      2028-01-21 / Strike $330 / OI 282 / IV 51% / Vol 110<br>
+    
+  </td>
+</tr>
+<tr>
+  <td class="ticker">PFE</td>
+  <td class="score">48.1</td>
+  <td><span class="pos">+0.4%</span></td>
+  <td><span class="pos">+2.72pp</span></td>
+  <td><span class="pos">3.5</span></td>
+  <td><span class="neutral">—</span></td>
+  <td class="contracts">
+    
+      2027-06-17 / Strike $40 / OI 29,367 / IV 28% / Vol 125<br>
+    
+      2028-01-21 / Strike $30 / OI 28,143 / IV 31% / Vol 284<br>
+    
+      2027-06-17 / Strike $32 / OI 22,847 / IV 27% / Vol 282<br>
+    
+      2028-01-21 / Strike $27 / OI 21,578 / IV 32% / Vol 16<br>
+    
+      2028-01-21 / Strike $35 / OI 21,376 / IV 29% / Vol 70<br>
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+
+<div class="note">
+<b>⚠️ 使用提示</b>
+<ul>
+  <li><b>数据不足即未命中</b>：必要 OI 日/周环比、历史 Z-score、IV 对比或 Put 基线缺失，不计入命中榜，不用高存量 OI 或二次分析分补足。</li>
+  <li><b>数据源</b>：<code>polygon</code>（Polygon REST API，当日 OI/IV/Greeks 完整）。</li>
+  <li><b>本报告只做选股，不构成投资建议</b>。LEAPS 流动性差、跳点大，实操务必自行复核 bid/ask。</li>
+  <li><b>判定方法</b>：新增持仓率异常、净增占比、持仓保留、固定合约相对IV和股价配合都满足，历史完整且观察分达门槛才入选。必要数据缺失则未命中。</li>
+  <li><b>时间口径</b>：OI日期按供应商前一交易日规则推定并记录抓取时间；IV/股价按行情交易日。OI增量与对应成交量不匹配是数据告警，不是大宗交易证据。</li>
+  <li><b>期限结构</b>：当前没有近月期权输入，未启用期限结构确认，不把该字段补零或作为必选门槛。</li>
+  <li><b>周末说明</b>：周末或美股休市日运行时，系统会自动使用最近一个美股交易日归档数据，避免把休市日生成的报告误解为新交易信号。</li>
+</ul>
+</div>
+
+<p class="footer">数据交易日：2026-11-09 · 生成时间：2026-11-09 23:40:35 · LEAPS 选股系统 v0.1.0</p>
+
+</body>
+</html>
